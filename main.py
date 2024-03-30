@@ -1,8 +1,12 @@
+import multiprocessing
 import discord
+import asyncio
+from discord.ext import commands
 import re
 import os
 from dotenv import load_dotenv
 from datetime import datetime
+import subprocess
 
 # VARIABLES GLOBALES (PARAMETRES)
 ID_CANAL_AUTOSIGNALEMENT = 1223257795571351572
@@ -146,11 +150,27 @@ class MyClient(discord.Client):
         MoisJourHeureMinuteSeconde = maintenant.strftime("%m%d%H%m%S")
         identifiant = f"{AnneeCourte}{MoisJourHeureMinuteSeconde}"
         return identifiant
-            
-            
+
 intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run(TOKEN)
-#test
+#client.run(TOKEN)
+bot = commands.Bot(command_prefix='/',intents=intents)
+# Définir une commande
+@bot.command()
+async def addWL(ctx, arg1, arg2):
+    commande =  f"sed -i '/^{arg1}$/d' AutoSignalement/dictionnaire_{arg2.lower()}.txt.copy && echo 'OK !'"
+    resultat = subprocess.run(commande, shell=True, capture_output=True, text=True)
+    # Renvoyer un message de salutation personnalisé
+    await ctx.send(f"Résultat : {resultat}")
+
+
+# Créer un processus
+bot_process = multiprocessing.Process(target=bot.run(TOKEN))
+client_process = multiprocessing.Process(target=client.run(TOKEN))
+bot_process.start()
+client_process.start()
+
+bot_process.join()
+client_process.join()
