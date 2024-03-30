@@ -9,7 +9,9 @@ load_dotenv()
 TOKEN = os.getenv('TOKEN')
 print(".env chargé : OK !")
 
-print("Chargement des dictionnaires...")
+SALON_SUIVI_MESSAGES = 1223280408939073536
+print(f"Salon défini pour le suivi des messages : OK ! (ID : {SALON_SUIVI_MESSAGES}.") if SALON_SUIVI_MESSAGES is not None else print(f"Salon défini pour le suivi des messages : NOK !\nVeuillez définir un ID de salon dans le fichier main.py à la variable globale : SALON_SUIVI_MESSAGES")
+print("\nChargement des dictionnaires...")
 # Liste des mots interdits pour la catégorie insulte 
 with open("AutoSignalement/dictionnaire_insultes.txt", "r") as fichier:
     contenu_fichier_insultes = fichier.read()
@@ -26,7 +28,7 @@ with open("AutoSignalement/dictionnaire_politique.txt", "r") as fichier:
     liste_politique = list(filter(len, liste_politique))
 print("Catégortie politique : OK !\nElements chargés : ",len(liste_politique))
 
-print("Chargement des salons à exclure...")
+print("\nChargement des salons à exclure...")
 with open("AutoSignalement/except_salons_insultes.txt", "r") as fichier:
     contenu_salons_insultes = fichier.read()
     #nf = non formaté
@@ -55,10 +57,10 @@ with open("AutoSignalement/except_salons_politique.txt", "r") as fichier:
 print("Catégortie politique : OK !\nElements chargés : ",len(liste_salons_politique))
 
 ID_CANAL_AUTOSIGNALEMENT = 1223257795571351572
-print(f"Salon de référence pour l'Autosignalement : {ID_CANAL_AUTOSIGNALEMENT}")
+print(f"\nSalon de référence pour l'Autosignalement : {ID_CANAL_AUTOSIGNALEMENT}")
 
 motif_regex_insultes = re.compile(r'\b(?:' + '|'.join(map(re.escape, liste_insultes)) + r')\b', re.IGNORECASE)
-print("Compilation des motifs regex pour la catégorie insultes : OK !")
+print("\nCompilation des motifs regex pour la catégorie insultes : OK !")
 
 motif_regex_politique = re.compile(r'\b(?:' + '|'.join(map(re.escape, liste_politique)) + r')\b', re.IGNORECASE)
 print("Compilation des motifs regex pour la catégorie politique : OK !")
@@ -66,7 +68,9 @@ print("Compilation des motifs regex pour la catégorie politique : OK !")
 class MyClient(discord.Client):
     async def on_ready(self):
         print(f'Logged on as {self.user}!')
-
+        
+    async def on_message_edit(self, before, after):
+        print(f"-------------------\nUn message a été modifié !\nDe : {before.author}\nID user : {before.author.id}\nID Salon : {before.channel.id}\nSalon : {before.channel} \nID : {before.id}\nLien du message : {before.jump_url}\nAvant : {before.content}\nAprès : {after.content}")
     async def on_message(self, message):
         print(f'-------------------\nDe : {message.author}\nID user : {message.author.id}\nID Salon : {message.channel.id}\nSalon : {message.channel} \nPosition : {message.position}\nid : {message.id}\nLien du message : {message.jump_url}\nContenu : {message.content}')
 
