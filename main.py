@@ -40,7 +40,6 @@ with open("AutoSignalement/except_salons_insultes.txt", "r") as fichier:
         liste_salons_insultes.append(salon_insultes)
         
 print("Catégortie Insultes : OK !\nElements chargés : ",len(liste_salons_insultes))
-print(liste_salons_insultes)
 
 with open("AutoSignalement/except_salons_politique.txt", "r") as fichier:
     contenu_salons_politique = fichier.read()
@@ -108,7 +107,9 @@ class MyClient(discord.Client):
             # Creation identifiant signalement
             maintenant = datetime.now()
             #idSignalement = str_date_heure = maintenant.strftime("%d%m%Y%H%M%S")
-            idSignalement = str_date_heure = maintenant.strftime("%YY%mm%dd%HH%mm%SS")
+            AnneeCourte =  str(int(maintenant.strftime("%Y"))-2000)
+            MoisJourHeureMinuteSeconde = maintenant.strftime("%m%d%H%m%S")
+            idSignalement = f"{AnneeCourte}{MoisJourHeureMinuteSeconde}"
             # alerte = f"**Alerte !** L'utilisateur {auteur} a utilisé un mot interdit dans le message suivant : `{message}`"
             embed = discord.Embed(
                 description=f"<@{userid}> a envoyé un message ({link_message}) qui est **interdit** dans le salon <#{channelid}>",
