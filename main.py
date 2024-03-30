@@ -1,6 +1,4 @@
-import multiprocessing
 import discord
-import asyncio
 from discord.ext import commands
 import re
 import os
@@ -71,106 +69,101 @@ print("\nCompilation des motifs regex pour la catégorie insultes : OK !")
 motif_regex_politique = re.compile(r'\b(?:' + '|'.join(map(re.escape, liste_politique)) + r')\b')
 print("Compilation des motifs regex pour la catégorie politique : OK !")
 
-class MyClient(discord.Client):
-    async def on_ready(self):
-        print(f'Logged on as {self.user}!')
-        
-    async def on_message_edit(self, before, after):
-        print(f"-------------------\nUn message a été modifié !\nDe : {before.author}\nID user : {before.author.id}\nID Salon : {before.channel.id}\nSalon : {before.channel} \nID : {before.id}\nLien du message : {before.jump_url}\nAvant : {before.content}\nAprès : {after.content}")
-        canal_alerte = client.get_channel(SALON_SUIVI_MESSAGES)
-        if canal_alerte and before.content is not after.content:
-            idModification = await self.IdGenerator()
-            embed = discord.Embed(
-                description=f"<@{before.author.id}> a modifié son message ({before.jump_url}) dans le salon <#{before.channel.id}>",
-                color=discord.Color.default()
-            )
-            embed.set_author(name=f"Modification n°{idModification}")
-            embed.add_field(name="Avant", value=f"> {before.content}", inline=False)
-            embed.add_field(name="Après", value=f"> {after.content}", inline=True)
-                
-            await canal_alerte.send(embed=embed)
-        else:
-            print("Le salon  de log défini est incorrect ! La modification n'a pas pu être logué !")
-    async def on_message(self, message):
-        print(f'-------------------\nDe : {message.author}\nID user : {message.author.id}\nID Salon : {message.channel.id}\nSalon : {message.channel} \nPosition : {message.position}\nid : {message.id}\nLien du message : {message.jump_url}\nContenu : {message.content}')
-
-        #Lit le message en transformant tout en minuscule
-        content_message = message.content.lower()
-        # Ne transforme pas le message
-        content_message_no_lower = message.content
-        
-        #Détecteur de signalement Insultes
-        if str(message.channel.id) in liste_salons_insultes:
-            pass
-        else:
-            # Vérifier si le message correspond au motif regex de la catégorie insultes
-            liste_mots = []
-            correspondances = motif_regex_insultes.findall(content_message)
-            # if motif_regex_insultes.search(content_message):
-            if correspondances:
-                for mot in correspondances:
-                    liste_mots.append(mot)
-                mots = ','.join(liste_mots)
-                await self.AutoSignalementAlerte(content_message,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Insultes")
-
-        #Détecteur de signalement politique
-        if str(message.channel.id) in liste_salons_politique:
-            pass
-        else:
-            # Vérifier si le message correspond au motif regex de la catégorie politique
-            liste_mots = []
-            correspondances = motif_regex_politique.findall(content_message_no_lower)
-            
-            if correspondances:
-                for mot in correspondances:
-                    liste_mots.append(mot)
-                mots = ','.join(liste_mots)
-                await self.AutoSignalementAlerte(content_message_no_lower,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Politique") 
-
-    async def AutoSignalementAlerte(self, message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
-        canal_alerte = client.get_channel(ID_CANAL_AUTOSIGNALEMENT)
-        if canal_alerte:
-            idSignalement = await self.IdGenerator()
-            # alerte = f"**Alerte !** L'utilisateur {auteur} a utilisé un mot interdit dans le message suivant : `{message}`"
-            embed = discord.Embed(
-                description=f"<@{userid}> a envoyé un message ({link_message}) qui est **interdit** dans le salon <#{channelid}>",
-                color=discord.Color.default()
-            )
-            embed.set_author(name=f"[AUTO] Signalement n°{idSignalement}")
-            embed.add_field(name="Contenu du message", value=f"> {message}", inline=False)
-            embed.add_field(name="Mots identifiés", value=f"> {motsIdentifies}", inline=True)
-            embed.add_field(name="Catégorie", value=f"> {categorie}", inline=True)
-            
-            await canal_alerte.send(embed=embed)
-        else:
-            print("Aucun salon de log a été défini ! Le signalement n'a pas pu être logué !")
-    async def IdGenerator(self):
-        maintenant = datetime.now()
-        AnneeCourte =  str(int(maintenant.strftime("%Y"))-2000)
-        MoisJourHeureMinuteSeconde = maintenant.strftime("%m%d%H%m%S")
-        identifiant = f"{AnneeCourte}{MoisJourHeureMinuteSeconde}"
-        return identifiant
-
 intents = discord.Intents.default()
 intents.message_content = True
 
-client = MyClient(intents=intents)
-#client.run(TOKEN)
 bot = commands.Bot(command_prefix='/',intents=intents)
-# Définir une commande
+    
+@bot.event
+async def on_ready():
+    print(f'Logged on as {bot.user}!')
+
+@bot.event
+async def on_message_edit(before, after):
+    print(f"-------------------\nUn message a été modifié !\nDe : {before.author}\nID user : {before.author.id}\nID Salon : {before.channel.id}\nSalon : {before.channel} \nID : {before.id}\nLien du message : {before.jump_url}\nAvant : {before.content}\nAprès : {after.content}")
+    canal_alerte = bot.get_channel(SALON_SUIVI_MESSAGES)
+    if canal_alerte and before.content is not after.content:
+        idModification = await IdGenerator()
+        embed = discord.Embed(
+            description=f"<@{before.author.id}> a modifié son message ({before.jump_url}) dans le salon <#{before.channel.id}>",
+            color=discord.Color.default()
+        )
+        embed.set_author(name=f"Modification n°{idModification}")
+        embed.add_field(name="Avant", value=f"> {before.content}", inline=False)
+        embed.add_field(name="Après", value=f"> {after.content}", inline=True)
+            
+        await canal_alerte.send(embed=embed)
+    else:
+        print("Le salon  de log défini est incorrect ! La modification n'a pas pu être logué !")
+
+@bot.event
+async def on_message(message):
+    print(f'-------------------\nDe : {message.author}\nID user : {message.author.id}\nID Salon : {message.channel.id}\nSalon : {message.channel} \nPosition : {message.position}\nid : {message.id}\nLien du message : {message.jump_url}\nContenu : {message.content}')
+
+    #Lit le message en transformant tout en minuscule
+    content_message = message.content.lower()
+    # Ne transforme pas le message
+    content_message_no_lower = message.content
+    
+    #Détecteur de signalement Insultes
+    if str(message.channel.id) in liste_salons_insultes:
+        pass
+    else:
+        # Vérifier si le message correspond au motif regex de la catégorie insultes
+        liste_mots = []
+        correspondances = motif_regex_insultes.findall(content_message)
+        # if motif_regex_insultes.search(content_message):
+        if correspondances:
+            for mot in correspondances:
+                liste_mots.append(mot)
+            mots = ','.join(liste_mots)
+            await AutoSignalementAlerte(content_message,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Insultes")
+
+    #Détecteur de signalement politique
+    if str(message.channel.id) in liste_salons_politique:
+        pass
+    else:
+        # Vérifier si le message correspond au motif regex de la catégorie politique
+        liste_mots = []
+        correspondances = motif_regex_politique.findall(content_message_no_lower)
+        
+        if correspondances:
+            for mot in correspondances:
+                liste_mots.append(mot)
+            mots = ','.join(liste_mots)
+            await AutoSignalementAlerte(content_message_no_lower,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Politique")
+            
+async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
+    canal_alerte = bot.get_channel(ID_CANAL_AUTOSIGNALEMENT)
+    if canal_alerte:
+        idSignalement = await IdGenerator()
+        # alerte = f"**Alerte !** L'utilisateur {auteur} a utilisé un mot interdit dans le message suivant : `{message}`"
+        embed = discord.Embed(
+            description=f"<@{userid}> a envoyé un message ({link_message}) qui est **interdit** dans le salon <#{channelid}>",
+            color=discord.Color.default()
+        )
+        embed.set_author(name=f"[AUTO] Signalement n°{idSignalement}")
+        embed.add_field(name="Contenu du message", value=f"> {message}", inline=False)
+        embed.add_field(name="Mots identifiés", value=f"> {motsIdentifies}", inline=True)
+        embed.add_field(name="Catégorie", value=f"> {categorie}", inline=True)
+        
+        await canal_alerte.send(embed=embed)
+    else:
+        print("Aucun salon de log a été défini ! Le signalement n'a pas pu être logué !")
+        
+async def IdGenerator():
+    maintenant = datetime.now()
+    AnneeCourte =  str(int(maintenant.strftime("%Y"))-2000)
+    MoisJourHeureMinuteSeconde = maintenant.strftime("%m%d%H%m%S")
+    identifiant = f"{AnneeCourte}{MoisJourHeureMinuteSeconde}"
+    return identifiant
+
 @bot.command()
 async def addWL(ctx, arg1, arg2):
     commande =  f"sed -i '/^{arg1}$/d' AutoSignalement/dictionnaire_{arg2.lower()}.txt.copy && echo 'OK !'"
     resultat = subprocess.run(commande, shell=True, capture_output=True, text=True)
     # Renvoyer un message de salutation personnalisé
-    await ctx.send(f"Résultat : {resultat}")
+    await ctx.send(f"Résultat : {resultat.stdout}")
+    
 
-
-# Créer un processus
-bot_process = multiprocessing.Process(target=bot.run(TOKEN))
-client_process = multiprocessing.Process(target=client.run(TOKEN))
-bot_process.start()
-client_process.start()
-
-bot_process.join()
-client_process.join()
+bot.run(TOKEN)
