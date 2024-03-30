@@ -4,12 +4,15 @@ import os
 from dotenv import load_dotenv
 from datetime import datetime
 
+# VARIABLES GLOBALES (PARAMETRES)
+ID_CANAL_AUTOSIGNALEMENT = 1223257795571351572
+SALON_SUIVI_MESSAGES = 1223280408939073536
+
 print("Initialisation en cours ...")
 load_dotenv()
 TOKEN = os.getenv('TOKEN')
 print(".env chargé : OK !")
 
-SALON_SUIVI_MESSAGES = 1223280408939073536
 print(f"Salon défini pour le suivi des messages : OK ! (ID : {SALON_SUIVI_MESSAGES}.") if SALON_SUIVI_MESSAGES is not None else print(f"Salon défini pour le suivi des messages : NOK !\nVeuillez définir un ID de salon dans le fichier main.py à la variable globale : SALON_SUIVI_MESSAGES")
 print("\nChargement des dictionnaires...")
 # Liste des mots interdits pour la catégorie insulte 
@@ -56,8 +59,7 @@ with open("AutoSignalement/except_salons_politique.txt", "r") as fichier:
         
 print("Catégortie politique : OK !\nElements chargés : ",len(liste_salons_politique))
 
-ID_CANAL_AUTOSIGNALEMENT = 1223257795571351572
-print(f"\nSalon de référence pour l'Autosignalement : {ID_CANAL_AUTOSIGNALEMENT}")
+print(f"\nSalon de référence pour l'Autosignalement : OK ! (ID : {ID_CANAL_AUTOSIGNALEMENT})") if ID_CANAL_AUTOSIGNALEMENT is not None else print(f"Salon de référence pour l'Autosignalement : NOK !\nVeuillez définir un ID de salon dans le fichier main.py à la variable globale : ID_CANAL_AUTOSIGNALEMENT")
 
 motif_regex_insultes = re.compile(r'\b(?:' + '|'.join(map(re.escape, liste_insultes)) + r')\b', re.IGNORECASE)
 print("\nCompilation des motifs regex pour la catégorie insultes : OK !")
@@ -71,6 +73,20 @@ class MyClient(discord.Client):
         
     async def on_message_edit(self, before, after):
         print(f"-------------------\nUn message a été modifié !\nDe : {before.author}\nID user : {before.author.id}\nID Salon : {before.channel.id}\nSalon : {before.channel} \nID : {before.id}\nLien du message : {before.jump_url}\nAvant : {before.content}\nAprès : {after.content}")
+        canal_alerte = client.get_channel(SALON_SUIVI_MESSAGES)
+        if canal_alerte:
+            idModification = await self.IdGenerator()
+            embed = discord.Embed(
+                description=f"<@{before.author.id}> a modifié son message ({before.jump_url}) dans le salon <#{before.channel.id}>",
+                color=discord.Color.default()
+            )
+            embed.set_author(name=f"Modification n°{idModification}")
+            embed.add_field(name="Avant", value=f"> {before.content}", inline=False)
+            embed.add_field(name="Après", value=f"> {after.content}", inline=True)
+                
+            await canal_alerte.send(embed=embed)
+        else:
+            print("Aucun salon de log a été défini ! La modification n'a pas pu être logué !")
     async def on_message(self, message):
         print(f'-------------------\nDe : {message.author}\nID user : {message.author.id}\nID Salon : {message.channel.id}\nSalon : {message.channel} \nPosition : {message.position}\nid : {message.id}\nLien du message : {message.jump_url}\nContenu : {message.content}')
 
@@ -108,12 +124,7 @@ class MyClient(discord.Client):
     async def AutoSignalementAlerte(self, message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
         canal_alerte = client.get_channel(ID_CANAL_AUTOSIGNALEMENT)
         if canal_alerte:
-            # Creation identifiant signalement
-            maintenant = datetime.now()
-            #idSignalement = str_date_heure = maintenant.strftime("%d%m%Y%H%M%S")
-            AnneeCourte =  str(int(maintenant.strftime("%Y"))-2000)
-            MoisJourHeureMinuteSeconde = maintenant.strftime("%m%d%H%m%S")
-            idSignalement = f"{AnneeCourte}{MoisJourHeureMinuteSeconde}"
+            idSignalement = await self.IdGenerator()
             # alerte = f"**Alerte !** L'utilisateur {auteur} a utilisé un mot interdit dans le message suivant : `{message}`"
             embed = discord.Embed(
                 description=f"<@{userid}> a envoyé un message ({link_message}) qui est **interdit** dans le salon <#{channelid}>",
@@ -124,7 +135,16 @@ class MyClient(discord.Client):
             embed.add_field(name="Mots identifiés", value=f"> {motsIdentifies}", inline=True)
             embed.add_field(name="Catégorie", value=f"> {categorie}", inline=True)
             
-            await canal_alerte.send(embed=embed)            
+            await canal_alerte.send(embed=embed)
+        else:
+            print("Aucun salon de log a été défini ! Le signalement n'a pas pu être logué !")
+    async def IdGenerator(self):
+        maintenant = datetime.now()
+        AnneeCourte =  str(int(maintenant.strftime("%Y"))-2000)
+        MoisJourHeureMinuteSeconde = maintenant.strftime("%m%d%H%m%S")
+        identifiant = f"{AnneeCourte}{MoisJourHeureMinuteSeconde}"
+        return identifiant
+            
             
 intents = discord.Intents.default()
 intents.message_content = True
