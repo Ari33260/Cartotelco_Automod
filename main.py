@@ -61,10 +61,10 @@ print("Catégortie politique : OK !\nElements chargés : ",len(liste_salons_poli
 
 print(f"\nSalon de référence pour l'Autosignalement : OK ! (ID : {ID_CANAL_AUTOSIGNALEMENT})") if ID_CANAL_AUTOSIGNALEMENT is not None else print(f"Salon de référence pour l'Autosignalement : NOK !\nVeuillez définir un ID de salon dans le fichier main.py à la variable globale : ID_CANAL_AUTOSIGNALEMENT")
 
-motif_regex_insultes = re.compile(r'\b(?:' + '|'.join(map(re.escape, liste_insultes)) + r')\b', re.IGNORECASE)
+motif_regex_insultes = re.compile(r'\b(?:' + '|'.join(map(re.escape, liste_insultes)) + r')\b')
 print("\nCompilation des motifs regex pour la catégorie insultes : OK !")
 
-motif_regex_politique = re.compile(r'\b(?:' + '|'.join(map(re.escape, liste_politique)) + r')\b', re.IGNORECASE)
+motif_regex_politique = re.compile(r'\b(?:' + '|'.join(map(re.escape, liste_politique)) + r')\b')
 print("Compilation des motifs regex pour la catégorie politique : OK !")
 
 class MyClient(discord.Client):
@@ -74,7 +74,7 @@ class MyClient(discord.Client):
     async def on_message_edit(self, before, after):
         print(f"-------------------\nUn message a été modifié !\nDe : {before.author}\nID user : {before.author.id}\nID Salon : {before.channel.id}\nSalon : {before.channel} \nID : {before.id}\nLien du message : {before.jump_url}\nAvant : {before.content}\nAprès : {after.content}")
         canal_alerte = client.get_channel(SALON_SUIVI_MESSAGES)
-        if canal_alerte:
+        if canal_alerte and before.content is not after.content:
             idModification = await self.IdGenerator()
             embed = discord.Embed(
                 description=f"<@{before.author.id}> a modifié son message ({before.jump_url}) dans le salon <#{before.channel.id}>",
@@ -86,12 +86,14 @@ class MyClient(discord.Client):
                 
             await canal_alerte.send(embed=embed)
         else:
-            print("Aucun salon de log a été défini ! La modification n'a pas pu être logué !")
+            print("Le salon  de log défini est incorrect ! La modification n'a pas pu être logué !")
     async def on_message(self, message):
         print(f'-------------------\nDe : {message.author}\nID user : {message.author.id}\nID Salon : {message.channel.id}\nSalon : {message.channel} \nPosition : {message.position}\nid : {message.id}\nLien du message : {message.jump_url}\nContenu : {message.content}')
 
         #Lit le message en transformant tout en minuscule
         content_message = message.content.lower()
+        # Ne transforme pas le message
+        content_message_no_lower = message.content
         
         #Détecteur de signalement Insultes
         if str(message.channel.id) in liste_salons_insultes:
@@ -113,13 +115,13 @@ class MyClient(discord.Client):
         else:
             # Vérifier si le message correspond au motif regex de la catégorie politique
             liste_mots = []
-            correspondances = motif_regex_politique.findall(content_message)
+            correspondances = motif_regex_politique.findall(content_message_no_lower)
             
             if correspondances:
                 for mot in correspondances:
                     liste_mots.append(mot)
                 mots = ','.join(liste_mots)
-                await self.AutoSignalementAlerte(content_message,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Politique") 
+                await self.AutoSignalementAlerte(content_message_no_lower,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Politique") 
 
     async def AutoSignalementAlerte(self, message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
         canal_alerte = client.get_channel(ID_CANAL_AUTOSIGNALEMENT)
