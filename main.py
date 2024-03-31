@@ -72,7 +72,6 @@ print("Compilation des motifs regex pour la catégorie politique : OK !")
 
 intents = discord.Intents.default()
 intents.message_content = True
-<<<<<<< HEAD
 
 bot = commands.Bot(command_prefix='!',intents=intents)
 
@@ -179,7 +178,6 @@ if __name__ == "__main__":
     # Insérez ici le token de votre bot
     bot.run(TOKEN)
 
-=======
 
 bot = commands.Bot(command_prefix='/',intents=intents)
     
@@ -276,4 +274,3 @@ async def addWL(ctx, arg1, arg2):
     
 
 bot.run(TOKEN)
->>>>>>> 4c05702205714f725b9d3553d1b63fd4c59a4bc9
