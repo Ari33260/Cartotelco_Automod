@@ -25,7 +25,7 @@ with open("AutoSignalement/dictionnaire_insultes.txt", "r") as fichier:
     Listes_mots['insultes'] = contenu_fichier_insultes.split('\n')
     #supprime les éléments vides
     Listes_mots['insultes'] = list(filter(len, Listes_mots['insultes']))
-print("Catégortie Insultes : OK !\nElements chargés : ",len(Listes_mots['insultes']))
+print("Catégorie Insultes : OK !\nElements chargés : ",len(Listes_mots['insultes']))
 
 # Liste des mots interdits pour la catégorie politique 
 with open("AutoSignalement/dictionnaire_politique.txt", "r") as fichier:
@@ -33,7 +33,7 @@ with open("AutoSignalement/dictionnaire_politique.txt", "r") as fichier:
     Listes_mots['politique'] = contenu_fichier_politique.split('\n')
     #supprime les éléments vides
     Listes_mots['politique'] = list(filter(len, Listes_mots['politique']))
-print("Catégortie politique : OK !\nElements chargés : ",len(Listes_mots['politique']))
+print("Catégorie politique : OK !\nElements chargés : ",len(Listes_mots['politique']))
 
 print("\nChargement des salons à exclure...")
 with open("AutoSignalement/except_salons_insultes.txt", "r") as fichier:
@@ -78,18 +78,62 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!',intents=intents)
 
+# arg1 = mot à supprimer du dictionnaire
+# arg2 = catégorie
 @bot.command()
 async def addwl(ctx, arg1, arg2):
-    commande =  f"sed -i '/^{arg1}$/d' AutoSignalement/dictionnaire_{arg2.lower()}.txt.copy && echo 'Commande Unix : OK !'"
-    await ctx.send(f"Commande exécutée : {commande}")
+    commande =  f"sed -i '/^{arg1}$/d' AutoSignalement/dictionnaire_{arg2.lower()}.txt"
+    print(f"Commande exécutée : {commande}")
     resultat = subprocess.run(commande, shell=True, capture_output=True, text=True)
-    await ctx.send(f"Retour console : {resultat.stdout}\nMise à jour du dictionnaire...")
+    print(f"Retour console : {resultat.stdout}")
+    await ctx.send(f"Mise à jour du dictionnaire...")
     await MajListe(ctx,arg2.lower())
 
+# arg = mots (si plusieurs alors ils sont séparés par une virgule.)
+# arg-1 = catégorie
 @bot.command()
-async def hello(ctx):
-    # Envoie un message de salutation lorsque la commande !hello est appelée
-    await ctx.send("Bonjour ! Je suis un bot Discord.")
+async def addbl(ctx, *args):
+    print(args)
+    if len(args) > 1:
+        categorie = args[-1].lower()
+        # Permet de récupérer l'ensemble des mots même des expressions.
+        mots_nf = []
+        for argument in range(len(args)-1):
+            mots_nf.append(args[argument])
+        mots_nf = ' '.join(mots_nf)
+        # Transforme la variable mots_nf en liste car args est un tuple.
+        file_path = f"AutoSignalement/dictionnaire_{categorie.lower()}.txt"
+        mots_before = mots_nf.split(',')
+        mots_after = []
+        for mot in mots_before:
+            print(mot)
+            if mot in Listes_mots[categorie]:
+                await ctx.send(f"Le mot {mot} existe déjà dans le dictionnaire local ! Il ne peut être ajouté.")
+            else :
+                mots_after.append(mot)
+                            
+        if os.path.isfile(file_path) == True:
+            echo_data = '\n'.join(mots_after)
+            await ctx.send(f"Nombre d'élements à mettre à jour : {len(mots_after)}")
+            await ctx.send(f"Mise à jour du dictionnaire externe...")
+            commande =  f"echo -e '{echo_data}' >> {file_path} | sort -o {file_path} {file_path}"
+            print(f"Commande exécutée : {commande}")
+            resultat = subprocess.run(commande, shell=True, capture_output=True, text=True)
+            print(f"Retour console : {resultat.stdout}")
+            await ctx.send(f"Mise à jour du dictionnaire externe : OK !")
+            await ctx.send(f"Mise à jour du dictionnaire local...")
+            for mot in mots_after:
+                Listes_mots[categorie].append(mot)
+            motif_regex[categorie] = re.compile(r'\b(?:' + '|'.join(map(re.escape, Listes_mots[categorie])) + r')\b')
+            await ctx.send(f"Compilation des motifs regex pour la catégorie {categorie} : OK !")
+            await ctx.send(f"Nombre d'éléments chargés dans le dictionnaire local : {len(Listes_mots[categorie])}")
+        else:
+            await ctx.send(f"Ce dictionnaire ({categorie}) externe n'existe pas !")
+    else:
+        await ctx.send(f"Le nombre d'argument est insuffisant !")
+        await ctx.send(f"^!addbl [mots ou expressions à ajouter] [catégorie]")
+        await ctx.send(f"Exemple :")
+        await ctx.send(f"^!addbl Marine Le Pen,Zemmour,Macron Politique")
 
 @bot.event
 async def on_ready():
