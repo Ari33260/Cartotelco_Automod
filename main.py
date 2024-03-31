@@ -116,7 +116,8 @@ async def addbl(ctx, *args):
             echo_data = '\n'.join(mots_after)
             await ctx.send(f"Nombre d'élements à mettre à jour : {len(mots_after)}")
             await ctx.send(f"Mise à jour du dictionnaire externe...")
-            commande =  f"echo -e '{echo_data}' >> {file_path} | sort -o {file_path} {file_path}"
+            commande =  f"echo '{echo_data}' >> {file_path} | sort -o {file_path} {file_path}"
+            print(commande)
             print(f"Commande exécutée : {commande}")
             resultat = subprocess.run(commande, shell=True, capture_output=True, text=True)
             print(f"Retour console : {resultat.stdout}")
