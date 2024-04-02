@@ -1,3 +1,11 @@
+
+
+
+ Christophe Gomart
+ Céline Imart
+ mélenchon
+-e Henry de Lesqun
+-e Marine le Pen
 10 Downing Street
 100 premiers jours
 16e république soviétique
@@ -5,40 +13,246 @@
 49e parallèle
 51e État
 89
-à gauche
 A.M.P.
+ACAB
+ACABer
+AF
+AIT
+ANE
+Action antifasciste
+Action française
+Afghanistan
+Al-Qaïda
+Althing
+Aryen
+Assemblée nationale
+Association internationale des travailleurs
+Bas-Canadien
+Black Panther
+Black Panther Party
+Blanc
+Bound
+Breiz Atao
+Bretagnexit
+Brexit
+Brexiter
+Bundestag
+Bureau ovale
+CE
+CEMP
+CMP
+CNR
+CSP
+CSU
+Canada
+Catalexit
+Chambre des Lords
+Chambre des communes
+Chambre des conseillers
+Chambre des députés
+Chambre des représentants
+Cinquième
+Cinquième République
+Comintern
+Commission européenne
+Congrès
+Conseil d’État
+Conseil économique, social et environnemental
+Coreper
+Coreper I
+Coreper II
+Corse
+DNR
+Danexit
+Destour
+Diète
+EDI
+EDID
+EF
+EMP
+Eretz Israël
+Esp.
+Europe
+Européen
+FLAM
+FRELIMO
+Fabien
+Fipu
+Flanby
+Foreign Office
+Fraction armée rouge
+France Travail
+France libre
+Francisme
+François-Xavier Bellamy
+French Power
+Frexit
+Frères musulmans
+Gaztamère
+Grand Remplacement
+Grexit
+GroKo
+Gt
+HR
+HR/VP
+Hamas
+Hansard
+Herrenvolk democracy
+Hezbollah
+Hirak
+Hollandouille
+Hommen
+Homo sovieticus
+Horizons
+Ike
+Internationale
+Istiqlal
+Itamaraty
+Jours heureux
+Juche
+Juché
+Khmer rose
+Khmer vert
+Kimilsungia
+Kimjongilia
+Knesset
+LFI
+LNR
+LR
+LREM
+Le Maréchal
+Lepep
+Likoudnik
+Légitimité
+MGTOW
+MLF
+Macron compatible
+Macron-compatible
+Mahdy
+Maison Blanche
+Maison-Blanche
+Marché commun
+Mouvement de libération des femmes
+NIMBY
+NPA
+NPA-A
+NPA-B
+NPA-C
+NPAiser
+NPD
+NUPES
+Nimby
+Nord
+Nord-Sud
+Nous
+Novorossia
+O.N.U.
+ON
+ONG
+P"C"F
+PAVA
+PCF
+PCFiser
+PEC
+PM
+POP
+PS
+PSDC
+Padanie
+Palais du Luxembourg
+Palais-Bourbeux
+Pays basque
+Pentagone
+Petit Remplacement
+Place Beauvau
+Polexit
+Polisario
+Pont aux Chantres
+Pont des Chantres
+Pont-aux-Chantres
+Première République
+P«C»F
+QAnon
+Quad
+Quai d’Orsay
+Quint
+R!
+RAHOWA
+RDA
+RI
+RIC
+RN
+RP
+RSS
+Reconquête
+Reconquête!
+Reichstag
+Renamo
+Rideau de bambou
+Rideau de fer
+Robespierre
+Rue Cambon
+Rue de Grenelle
+Rue de Montpensier
+Rue de Solférino
+Rue de Valois
+Rue de Varenne
+Ruzzie
+République islamique d’Afghanistan
+République islamique d’Iran
+S.D.N.
+SAC
+SE
+SFIO
+SO
+Sentier lumineux
+Shâm
+Smic
+Sociale
+Société des Nations
+Sonderweg
+Soviet
+Suédoise
+Séoul
+Tonton
+Trésor public
+UNITA
+UNR
+Union africaine
+Union française
+VDB
+Wallonie
+Westminster
+Yakoutie
+Z0ZZ
+ZOZZ
+Zemmouristan
 abertzale
 absolu
 absolutisme
 abstentionniste
-ACAB
-ACABer
-accélérationnisme
-accélérationniste
 accord de coopération
 accumulation
+accélérationnisme
+accélérationniste
 acquis communautaire
 acratie
 acratisme
 acte
-acteur non étatique
 acteur non gouvernemental
-Action antifasciste
-Action française
+acteur non étatique
 activisme
-actrice non étatique
 actrice non gouvernementale
+actrice non étatique
 adelantade
 adjoint au maire
 administration
 adopter
-AF
 affaires étrangères
-Afghanistan
 africanisme
+afro-amazighité
 afro-féminisme
 afro-féministe
-afro-amazighité
 afroféminisme
 afroféministe
 agencification
@@ -50,17 +264,14 @@ agora
 agorisme
 agoriste
 ahidjoïste
-AIT
-Al-Qaïda
 alaouite
 algocratie
 alliance
 alt-right
-Althing
 amazighisme
 amender
-américaniste
 amnistie
+américaniste
 anacyclose
 anarchie
 anarchiser
@@ -72,7 +283,6 @@ anarque
 anationalisme
 ancap
 androcène
-ANE
 angarie
 annamitophile
 annamitophilie
@@ -80,32 +290,32 @@ annexé
 annexés
 anocratie
 anthropolitique
+anti-antifa
 anti-antifasciste
+anti-immigration
 anti-national
+anti-partis
 anti-poutinisme
+anti-remplaciste
 anti-révisionnisme
 anti-révisionniste
 anti-système
-anti-antifa
-anti-élites
-anti-partis
-anti-remplaciste
 anti-wokisme
 anti-wokiste
+anti-élites
 antiboulangiste
 antibourgeois
 anticonstitutionnellement
-antidémagogique
-antidémocratique
 antiduplessiste
 antidynastique
+antidémagogique
+antidémocratique
 antifa
 antifasciste
 antifédéralisme
 antigiscardisme
 antiglobalisme
 antigouvernemental
-anti-immigration
 antiministériel
 antimonarchique
 antimonarchiste
@@ -119,13 +329,14 @@ antipauvreté
 antisystème
 antiwokisme
 apartheid
-apparenté
 apparentement
-après-législatives
-après-Mai 68
+apparenté
 aprisme
+après-Mai 68
+après-législatives
 aquaresponsabilité
 aquaresponsable
+arabe
 arabisme
 arbitraire
 archéo-futuriste
@@ -137,12 +348,9 @@ arménité
 aroniste
 arpitanisme
 aryanisation
-Aryen
 assemblée législative
-Assemblée nationale
 assimilable
 assistanciel
-Association internationale des travailleurs
 assujettir
 assuranciel
 assurantiel
@@ -157,17 +365,15 @@ autocratie libérale
 autodissolution
 autogénocide
 autonomiste
-autoréduction
 autoritaire
-autre
+autoréduction
 avant-règne
 axe du Mal
 axiocratie
 baasisme
 baathiste
-babœufien
 babouvisme
-bâillonner
+babœufien
 balkanisation
 balladurette
 balladurisation
@@ -178,21 +384,17 @@ banc arrière
 bandériste
 barriste
 bas-canadien
-Bas-Canadien
-base
 basisme
 basiste
 beau risque
 belgeoisant
 belligène
-béninisme
 berbérisme
 beydanisme
 bicaméralisme
 bicaméraliste
 bicamérisme
 bicamériste
-biélectif
 bilatéralisme
 biocratie
 bioéthicien
@@ -205,23 +407,17 @@ bismarckien
 bisounours
 biyaïsme
 biyaïste
-Black Panther
-Black Panther Party
+biélectif
 blairisme
-blanc
-Blanc
 blanchitude
 blasquisme
 blavérisme
-bleu
-bloc
 bloc des gauches
 bloc noir
 blocadie
 blocard
 blocarde
 bobocrate
-boîte à outils
 boiteux
 bolivien
 bolivo-paraguayen
@@ -235,32 +431,28 @@ bougisme
 bougiste
 bouillonnement
 boulangiste
-Bound
 bourgeois
-bourrage d’urnes
 bourrage des urnes
+bourrage d’urnes
 bourrer les urnes
 bourse du travail
+boîte à outils
 bras de fer
-Breiz Atao
 brejnévien
-Bretagnexit
-Brexit
 brexiter
-Brexiter
 brexiteur
 brexitologie
 brexitologue
 briandisme
 brun
 buissonniser
-Bundestag
 bureau Ovale
-Bureau ovale
 bureau politique
 bureaucratie
 bushien
 byzantinisme
+bâillonner
+béninisme
 cabinet noir
 cabinettard
 cabinettarde
@@ -269,9 +461,7 @@ cagoule noire
 cagouler
 cagoules noires
 camp de concentration
-campagne
 campagnocratie
-Canada
 canadianisme
 canadianité
 canadien
@@ -297,7 +487,6 @@ casse-toi, pauv’ con
 casse-toi, pov’ con
 castor
 catalaniste
-Catalexit
 catallarchie
 catho-laïc
 catho-laïcité
@@ -305,37 +494,25 @@ catholique ultra
 caucus
 caudilliste
 caudillo
-CE
 cellule
-CEMP
 centralisateur
 centralisation
 centraliste
 centre
 centre droit
 centre gauche
-césar
-césarien
-césarienne
-césarisme
 chabada
-chabadabada
 chabada-bada
+chabadabada
 chabanisation
 chabaniser
 challengeur
 challengeuse
 chambardement
-chambre
 chambre basse
-chambre des communes
-Chambre des communes
-Chambre des conseillers
-chambre des députés
-Chambre des députés
 chambre des Lords
-Chambre des Lords
-Chambre des représentants
+chambre des communes
+chambre des députés
 chambre haute
 chancelier
 chancelière
@@ -344,12 +521,11 @@ charismatique
 chartisme
 chartiste
 chasse aux sorcières
-château-fort
 chef de cabinet
-chef d’État
-chef d’état
 chef diplo
 chef du gouvernement
+chef d’État
+chef d’état
 chefferie
 cheval de retour
 chien de garde
@@ -359,8 +535,7 @@ chiraquisme
 choc des civilisations
 chomskyen
 chrétien-démocrate
-Cinquième
-Cinquième République
+château-fort
 cisalpiner
 cisalpiniser
 citoyan
@@ -376,24 +551,21 @@ clause de dérogation
 clause de revoyure
 clause nonobstant
 clause passerelle
+clientèle
+clientélaire
+clientélisation
+clientélisme
+climato-hypocrite
+climato-rassurisme
+climato-rassuriste
+climato-réaliste
+climato-sceptique
 clérical
 clérico-légitimiste
 cléricocratique
 clérocratie
-clientélaire
-clientèle
-clientélisation
-clientélisme
-climato-rassurisme
-climato-sceptique
-climato-hypocrite
-climato-rassuriste
-climato-réaliste
-CMP
-CNR
 coalition
 codétermination
-coétat
 cohabitation
 colistier
 colistière
@@ -402,11 +574,9 @@ collège électoral
 colonialisme
 colonialiste
 coloniser
-Comintern
-comité Théodule
 comitologie
+comité Théodule
 commissariocratie
-Commission européenne
 commission mixte paritaire
 communeux
 communisme anarchiste
@@ -420,48 +590,45 @@ concert de casseroles
 concordataire
 conducator
 conduite en sous-main
+confessionalisme
+confessionnalisme
+confusionnisme
 confédéral
 confédéralisme
 confédération
 confédérer
-confessionalisme
-confessionnalisme
-confusionnisme
 congolité
 congréganisme
 congréganiste
-Congrès
 conjurationnisme
 conseil
 conseil communal
-conseil d’arrondissement
 conseil de cabinet
 conseil de sécurité intérieure
-conseil départemental
-conseil des ministres
 conseil des Prud’hommes
-Conseil d’État
-Conseil économique, social et environnemental
+conseil des ministres
+conseil départemental
+conseil d’arrondissement
 conseil général
-conseil métropolitain
 conseil municipal
+conseil métropolitain
 conseil régional
 conseil syndical
 conseiller communautaire
 conseiller départemental
 conseiller général
-conseiller métropolitain
 conseiller municipal
+conseiller métropolitain
 conseiller régional
 conseiller syndical
 conseiller territorial
+conseillisme
 conseillère départementale
 conseillère générale
-conseillère métropolitaine
 conseillère municipale
+conseillère métropolitaine
 conseillère régionale
 conseillère syndicale
-conseillisme
 consensus laurentien
 consensus permissif
 conservateur
@@ -479,10 +646,10 @@ contra
 contractualisme
 contractualiste
 contrat social
-contre-rapporteur
-contre-rapporteuse
 contre-hégémonie
 contre-hégémonique
+contre-rapporteur
+contre-rapporteuse
 contrefaçon de mouvement d’opinion
 contrefaçon d’opinion
 contrer
@@ -492,15 +659,11 @@ copagande
 copéisation
 cordon
 cordon sanitaire
-Coreper
-Coreper I
-Coreper II
 coronacratie
-corps électoral
 corps intermédiaires
 corps social
+corps électoral
 corrompalisme
-Corse
 corsophobie
 cortès
 cosmocratie
@@ -509,7 +672,7 @@ course de petits chevaux
 court-termiste
 covidisme
 covidiste
-crédit social
+coétat
 crisogène
 crispinien
 crispinienne
@@ -518,8 +681,7 @@ croupier d’élections
 cryptarchie
 cryptofasciste
 cryptoraciste
-CSP
-CSU
+crédit social
 culte de la personnalité
 culture de l’effacement
 culture du nivellement
@@ -531,100 +693,32 @@ cyber-dissidente
 cyber-militant
 cyber-militante
 cyberactiviste
-cyberdémocratie
 cyberdiplomatie
 cyberdissident
 cyberdissidente
+cyberdémocratie
 cybermilitant
 cybermilitante
 cybernétique
 cyberpuissance
 czariste
+césar
+césarien
+césarienne
+césarisme
 dame patronnesse
-Danexit
 dans les fourgons de l’étranger
 darmanisation
 darwiniste social
 datacratie
-dé-démocratisation
-débaathiser
-débat
-décentralisateur
-décentralisatrice
-décentraliser
-déclinisme
-décollectivisable
-découplage
-décumul
-décumul des mandats
-défense
-défidélisation
-défidéliser
-défiler
-défusion
-dégagisme
-dégagiste
-déjoyiste
-délai de viduité
 delanoïste
-délégué sénatorial
-déléguée sénatoriale
-délit d’opinion
-démagogie
-démaoïsation
-démission-réélection
-démochrétien
-démocracide
-démocrate
-démocrate-chrétien
-démocrate-chrétienne
-démocrate-socialiste
-démocratie directe
-démocratie illibérale
-démocratie liquide
-démocratie participative
-démocratie représentative
-démocratisable
-démocratisation
-démocratiser
-démocrature
-démocsoc
-démogéronsie
-démogéronte
-démogérontie
 demoiselle patronnesse
 demokhrate
-démoncratie
-démondialisation
-démopédie
-démopédique
-dénationalisable
-dénationalisation
 dengisme
-déposition
-dépossédé
-dépoutinisation
-dépsychiatrisation
-députable
-députation
-députée
 desaparecido
-désécuritisation
-déséléphantiser
-déshérité
-déshéritée
-désindexation
 dessalinien
-déstalinisation
-Destour
-désulfurisation
-désurbanisation
-déterritorialisé
-détricotage
-détrônement
 deux cents familles
 deuxième dame
-déviationnisme
 dictateur
 dictatrice
 dictature
@@ -632,29 +726,26 @@ dictature des minorités
 dictature du prolétariat
 dictocratie
 die-in
-diète
-Diète
-diff
 differ
 dignité
 dilatoire
 diplo
 dir cab
-dir’ cab
 dircab
 dircab’
 directeur de cabinet
 directeur du scrutin
 directrice de cabinet
 dirigeant
+dir’ cab
 disposition de souveraineté parlementaire
 dissident
 dissident en ligne
 dissidente en ligne
 diversitaire
 divisionnisme
+diète
 djihadosphère
-DNR
 doctrinarisme
 doctrine
 dorgérisme
@@ -682,53 +773,80 @@ durabilité
 duvaliérisme
 duvaliériste
 dysarchie
-Échiquier
-éclosion généralisée
-éco-féminisme
-éco-vandalisme
-écofascisme
-écoféminisme
-écoféministe
-écolo-macroniste
-écologie
-écologie politique
-écologie profonde
-écologie superficielle
-économie de marché
-économie sociale de marché
-économie socialiste de marché
-écosocialisme
-écoterrorisme
-EDI
-EDID
-éditocratie
-EF
+dé-démocratisation
+débaathiser
+débat
+décentralisateur
+décentralisatrice
+décentraliser
+déclinisme
+décollectivisable
+découplage
+décumul
+décumul des mandats
+défense
+défidélisation
+défidéliser
+défiler
+défusion
+dégagisme
+dégagiste
+déjoyiste
+délai de viduité
+délit d’opinion
+délégué sénatorial
+déléguée sénatoriale
+démagogie
+démaoïsation
+démission-réélection
+démochrétien
+démocracide
+démocrate
+démocrate-chrétien
+démocrate-chrétienne
+démocrate-socialiste
+démocratie directe
+démocratie illibérale
+démocratie liquide
+démocratie participative
+démocratie représentative
+démocratisable
+démocratisation
+démocratiser
+démocrature
+démocsoc
+démogéronsie
+démogéronte
+démogérontie
+démoncratie
+démondialisation
+démopédie
+démopédique
+dénationalisable
+dénationalisation
+déposition
+dépossédé
+dépoutinisation
+dépsychiatrisation
+députable
+députation
+députée
+déshérité
+déshéritée
+désindexation
+déstalinisation
+désulfurisation
+désurbanisation
+désécuritisation
+déséléphantiser
+déterritorialisé
+détricotage
+détrônement
+déviationnisme
 effacement
-égalisateur de puissance
-égalitaire
-égalitariste
-égalité
-égalité des chances
-égalité hommes-femmes
-égocratie
-égyptianisme
-électeur
-électeur-éligible
-électoralisme
-électoraliste
-électrice
-élément de langage
-élire
-élitiste
-élu local
-Élysée
-élyséen
-EMP
 empereur au petit pied
 emploi fictif
 en-même-tempisme
-énarchique
-énarchisme
 encadrer
 encarté
 endiguement
@@ -738,44 +856,9 @@ enterrer
 entité sioniste
 entre-deux-tours
 envoyé spécial
-épistémocratie
-épistocratie
-épistocratique
-épurateur
-épuratrice
-équation
-équipollence
-Eretz Israël
 escadron de la mort
-Esp.
 espagnoliste
 estimiste
-établi
-établie
-état
-État
-État bleu
-État-charnière
-État dans l’État
-État défaillant
-État-DRS
-état d’urgence
-état d’urgence sanitaire
-État failli
-État fragile
-État français
-état-nation
-État-nation
-État-nounou
-État policier
-État profond
-État-providence
-État rouge
-État-SM
-État-parti
-État-tribal
-États-Unis d’Europe
-éthico-artistique
 ethno-masochisme
 ethnocacérisme
 ethnocratie
@@ -786,12 +869,9 @@ eurasisme
 euroatlantique
 eurocratie
 eurofédéraliste
-Europe
 européanisation
 européanité
-Européen
 euroréalisme
-éveilliste
 exagéré
 exopolitique
 expiration
@@ -803,19 +883,13 @@ extraparlementaire
 extrême
 extrême centre
 extrême droite
-extrême-droite
 extrême gauche
+extrême-droite
 extrême-gauche
 fabien
-Fabien
 facho
 fachosphère
 fachotte
-façon
-façonnage de l’actualité
-façonnage d’image
-façonneur d’image
-façonneuse d’image
 factionnalisme
 faferie
 faire acte de candidature
@@ -830,31 +904,22 @@ fasciste
 fauteur de troubles
 fayettisme
 fayuliste
-fédéraliser
-fédéralisme
-fédéralisme asymétrique
-fédéralisme renouvelé
-fédération
-fédéré
-féminisme
-féministe
+façonnage de l’actualité
+façonnage d’image
+façonneur d’image
+façonneuse d’image
 femme d’État
 fenêtre parlementaire
-féodalisme
 fignoliste
 fillonisme
 filloniste
 fipu
-Fipu
 first lady
 fissiste
-FLAM
 flamingantisme
-Flanby
 flandricisme
 flexisécurité
 flextension
-Foreign Office
 formaliste
 formariat
 format Normandie
@@ -865,25 +930,14 @@ formule
 formule 7/50
 formule magique
 fouloul
-Fraction armée rouge
-français langue commune
-France
-France libre
-France Travail
 francisation
-Francisme
 franco-allemand
 francocide
 francophonisme
 franquisation
+français langue commune
 fraternisation
-FRELIMO
 french power
-French Power
-Frères musulmans
-frérisme
-frériste
-Frexit
 fromagisme
 fromagiste
 front
@@ -892,7 +946,18 @@ front républicain
 frontisation
 frontiste
 frontnationaliser
+frérisme
+frériste
 fusion
+fédéraliser
+fédéralisme
+fédéralisme asymétrique
+fédéralisme renouvelé
+fédération
+fédéré
+féminisme
+féministe
+féodalisme
 gauche
 gauche castor
 gauche olfactive
@@ -904,124 +969,106 @@ gauchosphère
 gaudinisme
 gaullo-mitterrandiste
 gaystapo
-Gaztamère
 gel
-généralisation
 germanisme
 ghettoïsation
 girouettisme
 glasnost
 globalisme
-gôche
 golpisme
 golpiste
 gorafisation
 gorbatchévien
-gouverné
 gouvernement
 gouvernementalisme
 gouvernementaliste
+gouverné
 gradualisme
 gramscien
 gramsciste
 grand remplacement
-Grand Remplacement
 grand-remplacer
+groupe de pression
 grève de la faim
-grève-généralisme
 grève sauvage
+grève-généralisme
 gréviculteur
 grévicultrice
 gréviculture
-Grexit
-GroKo
-groupe
-groupe de pression
-Gt
-guérilla
 guerre
 guerre asymétrique
 guerre chimique
 guerre civile
 guerre des berceaux
-guerre étrangère
 guerre mondiale
 guerre par procuration
 guerre proxy
 guerre sainte
 guerre sociale
+guerre étrangère
+guérilla
 gynécocratie
+généralisation
+gôche
 habilitation
 hacktiviste
-Hamas
 hamiltonien
 hamoniste
 hanounisation
-Hansard
 hasbara
 haut-canadien
 haute trahison
-hégémonie
-hégémonisme
-hélicologiste
-hémicycle
-Herrenvolk democracy
-hétairie
-Hezbollah
 hidalguisation
-hiérocratie
-hiérocratique
 hindouïté
 hindutva
-Hirak
 historicisé
 hitlérisme
 hizb França
+hiérocratie
+hiérocratique
+hodjaïsme
 hogra
 holacratie
 holarchie
 hollandais
 hollandisme
-Hollandouille
 hominisme
-Hommen
-Homo sovieticus
 homonationalisme
 homosexualisme
 hostilité
-hodjaïsme
 hoxhaïsme
-HR
-HR/VP
 hungarisme
 hydropolitique
 hyper-droite
 hypercratie
 hyperprésidentialisation
 hyperpuissance
+hégémonie
+hégémonisme
+hélicologiste
+hémicycle
+hétairie
 ibérisme
 ibériste
 icarisme
-idées nouvelles
 identité
+idées nouvelles
 idéologie
 idéopole
 idéopôle
-Ike
-illégitime
 illibéral
 illichien
-îlot
+illégitime
 immigrationnisme
 immigrationniste
 impeachment
 impérialisme linguistique
 impôt sur le revenu
 inagglomérable
+indigné
 indigénisme
 indigénophile
 indigénophilie
-indigné
 indivisible
 inflation
 informateur
@@ -1031,14 +1078,10 @@ initiative
 innocuité des aliments
 inscrit
 insurrectionnalisme
-intégralisme
-intégrationnisme
-intégrationniste
 interculturalisme
 intergouvernementalisation
 intergroupe
 interministérialité
-Internationale
 internationalisme noir
 interpartisan
 interpellable
@@ -1048,6 +1091,9 @@ interprofessionnel
 interroi
 intersectionnalisme
 intouchabilité
+intégralisme
+intégrationnisme
+intégrationniste
 investiture
 involucré
 irakiser
@@ -1058,12 +1104,12 @@ islamisabilité
 islamisme politique
 islamo-
 islamo-France
-islamo-gauchisme
-islamo-gauchiste
 islamo-conservateur
-islamoconservateur
 islamo-délinquant
 islamo-démocrate
+islamo-gauchisme
+islamo-gauchiste
+islamoconservateur
 islamogauchiste
 isocratie
 isocratique
@@ -1072,8 +1118,6 @@ isomoirie
 isopolitie
 israélisation
 israélo-libanais
-Istiqlal
-Itamaraty
 ivoirité
 jacksonien
 jacobin
@@ -1082,13 +1126,10 @@ jdanovisme
 jihadosphère
 jospinisation
 jougant
-Jours heureux
-Juche
-Juché
 judéo-bellicisme
 judéo-belliciste
-judéo-bolchévisme
 judéo-bolchevisme
+judéo-bolchévisme
 judéobellicisme
 judéobelliciste
 jugement majoritaire
@@ -1103,23 +1144,14 @@ justicialiste
 kabilisme
 kakistocratie
 kakistocratique
-Khmer rose
-Khmer vert
 khrouchtchévisme
-kiévien
-Kimilsungia
-Kimjongilia
 kingmaker
+kiévien
 kleptocratie
-Knesset
 kremlinologique
 kriviniste
 laborieux
 lacrymocratie
-laïc
-laïciser
-laïcisme
-laïcité ouverte
 laisser-faire
 laissez faire
 laissez-faire
@@ -1128,32 +1160,28 @@ lanterne rouge
 latere
 lavalassien
 lavalassienne
-le dernier arrivé ferme la porte
+laïc
+laïciser
+laïcisme
+laïcité ouverte
 le Général
-Le Maréchal
+le dernier arrivé ferme la porte
 le sabre et le goupillon
-législatives
-légitime
-légitimité
-Légitimité
 leguiiste
 leguista
-léguiste
 lemairiste
 lendemain qui chante
-léniniste
-Lepep
 lettre ouverte
 levée
+libertarien
+libertarienne
+libertarisme
+liberté du commerce
 libérable
 libéral
 libéral-conservateur
 libéral-conservatisme
 libéralisation
-libertarien
-libertarienne
-libertarisme
-liberté du commerce
 lieutenant-gouverneur
 ligne de parti
 liguard
@@ -1161,31 +1189,30 @@ ligueur
 ligueuse
 liguiste
 like-minded
-Likoudnik
 liste bloquée
-liste électorale
 liste fermée
 liste participative
+liste électorale
 livre blanc
 livre-programme
-LNR
 lopisme
 lotocratie
 louis-philippard
 louis-philipparde
 love-in
-LR
-LREM
 luiprésident
+législatives
+légitime
+légitimité
+léguiste
+léniniste
 maastrichtien
 machine à couacs
-macoutisé
 macoutisme
 macoutiste
+macoutisé
 macron compatible
-Macron compatible
 macron-compatible
-Macron-compatible
 macronarchie
 macronesque
 macronien
@@ -1195,15 +1222,12 @@ macroniste
 macronpatible
 magistrature suprême
 magloiriste
-Mahdy
 main invisible du marché
 maire adjoint
 maire-adjoint
 maire-adjointe
 mairesse adjointe
 mairesse-adjointe
-Maison Blanche
-Maison-Blanche
 majoral
 majorité absolue
 majorité qualifiée
@@ -1220,7 +1244,6 @@ manifestant
 manifestante
 manifestation
 maratisme
-Marché commun
 marcheur
 marinisme
 marioniste
@@ -1230,26 +1253,17 @@ martinézien
 marxisme culturel
 masculinisme
 masculisme
+matignonnesque
 matériel démocratique
 matévon
-matignonnesque
 maurrassisme
-médiacratique
-médiévalisation
-médiocratie
-médiocratique
-mélenchonisation
-mélenchoniser
 melonisation
-mémorandum
 mendésisme
 mercatocratie
-message
 mesurette
-MGTOW
 mi-mandat
-micro-parti
 micro-courant
+micro-parti
 microciblage
 microcourant
 micronation
@@ -1258,15 +1272,13 @@ migration de retour
 mili
 milice
 militant
-militant·e
 militante
+militant·e
 militer
 millet
 minarchie
 minarchiste
 miniprésidentielle
-ministère
-ministériel
 ministral
 ministre
 ministre de l’intérieur
@@ -1274,10 +1286,11 @@ ministre des finances
 ministre-président
 ministresse
 ministricule
+ministère
+ministériel
 minorité agissante
 mission d’information
 mitterrandiste
-MLF
 modérantisme
 modéré
 modérée
@@ -1292,35 +1305,41 @@ monarchiste
 monarque républicain
 monarquesse
 mondialisation
-monétarisme
-monétariste
 monocaméral
 monocamérisme
 monocamériste
-monoélectif
 monopartisme
 monopole de la violence
 monopole de la violence légitime
 monopole de la violence physique légitime
+monoélectif
 montagnard
 montagnardiser
-Mouvement de libération des femmes
+monétarisme
+monétariste
 mouvement social
-mulâtrisme
-mulâtriste
 multiculturalisme
 multinationalisme
 multipartisme
 multipartite
+mulâtrisme
+mulâtriste
 mur de séparation
 musevenisme
+médiacratique
+médiocratie
+médiocratique
+médiévalisation
+mélenchonisation
+mélenchoniser
+mémorandum
 nakba
 narodnik
 national-capitalisme
+national-royalisme
 national-révolutionnaire
 national-sionisme
 national-socialiste
-national-royalisme
 nationalisation
 nationalisme civique
 nationalisme ethnique
@@ -1336,22 +1355,52 @@ naxalite
 nazi
 nazislamiste
 nazisme
+nettoyage ethnique
+neutralisme
+ni-ni
+niche parlementaire
+nihiliste
+niveau de secret
+noirisme
+noiriste
+nomophobie
+non danois
+non-Danois
+non-agression
+non-aligné
+non-apparenté
+non-danois
+non-inscrit
+non-inscrite
+non-intervention
+non-papier
+non-prolifération
+non-violence
+noocratie
+normalisme
+norvégianisation
+noucentisme
+novlangue
+nuançage
+nucléocratie
+nuit du 4 août
+nullification
 néerlandisme
 négationnisme
 négrisme
+néo-France
 néo-colonialisme
 néo-conservateur
 néo-conservatrice
-néo-démocrate
+néo-corporatisme
 néo-droitiste
-néo-France
+néo-démocrate
 néo-malthusianisme
 néo-nazi
 néo-nazie
+néo-paganisme
 néo-royaliste
 néo-socialiste
-néo-corporatisme
-néo-paganisme
 néocapitalisme
 néocolonialisme
 néocolonialiste
@@ -1367,75 +1416,26 @@ néopaganisme
 néoréaction
 néosocialisme
 néotrudeauiste
-nettoyage ethnique
-neutralisme
-ni-ni
-niche parlementaire
-nihiliste
-Nimby
-NIMBY
-niveau de secret
-noirisme
-noiriste
-nomophobie
-non-agression
-non-aligné
-non danois
-non-danois
-non-inscrit
-non-inscrite
-non-intervention
-non-papier
-non-prolifération
-non-violence
-non-apparenté
-non-Danois
-noocratie
-Nord
-Nord-Sud
-normalisme
-norvégianisation
-noucentisme
-Nous
-novlangue
-Novorossia
-NPA
-NPA-A
-NPA-B
-NPA-C
-NPAiser
-NPD
-nuançage
-nucléocratie
-nuit du 4 août
-nullification
-NUPES
-O.N.U.
 obédience
 occidentalisme
 occitanisme
 ochlocrate
 ochlocratie
 odalisme
-óðalisme
 odaliste
-óðaliste
 officiel
 oligarchie
 ombudsman
 ombudswoman
-ON
-ONG
 oniste
-opération
-opération séduction
 opinion publique
 opium du peuple
 opposition
 oppositionnel
 opprimé
 option zéro
-orange
+opération
+opération séduction
 orateur
 orbanisation
 ordre public
@@ -1446,20 +1446,14 @@ ors de la république
 ottomanisation
 oumma
 oustachi
-ouvert
 ouverture
 overclass
-P"C"F
-P«C»F
 pablisme
 pabliste
 padan
-Padanie
-Palais-Bourbeux
-Palais du Luxembourg
+palingénésie
 paléo-conservatisme
 paléoconservateur
-palingénésie
 pan-négrisme
 panarabiste
 pancatalaniste
@@ -1507,30 +1501,17 @@ patrie bleue
 patrimonialisation
 patriosphère
 paupériser
-PAVA
 pax americana
-Pays basque
-PCF
-PCFiser
-PEC
-pécressiste
-pédagogie
-pédonégationnisme
 peilloniste
 pelquiste
-Pentagone
-pépiste
-pérestroïka
 permanent
 personne exposée à la corruption
 personne politiquement exposée
 petit remplacement
-Petit Remplacement
 petite bourgeoisie
-petite-bourgeoisie
 petite nation
+petite-bourgeoisie
 petliouriste
-pétrodictature
 peuple
 peuplecratie
 phalange
@@ -1539,21 +1520,17 @@ phallocratique
 pharaon
 pharisaïsme
 philippiste
-philippoté
 philippoter
 philippotesque
 philippotiste
+philippoté
 pied-rouge
 pilarisation
 pivertisme
-Place Beauvau
 place du Colonel-Fabien
 planétarisation
 plate-forme
 platform
-plébicole
-plébiscite
-plénum
 ploutocrate
 ploutocratie
 pluralisme
@@ -1561,24 +1538,22 @@ pluralité absolue
 pluralité relative
 pluripartisme
 pluripartiste
-PM
+plébicole
+plébiscite
+plénum
 pogrom
 point d’enregistrement
 poker menteur
 polarisation
-pôle
-polémogène
-Polexit
 policologue
-Polisario
 politburo
 politicaillerie
-politico-économique
+politico-administratif
 politico-idéologique
 politico-juridique
 politico-médiatique
 politico-religieux
-politico-administratif
+politico-économique
 politicomanie
 politicomédiatique
 politique de l’inaction
@@ -1596,10 +1571,7 @@ poloche
 polonisation
 polycamérisme
 polycratie
-Pont aux Chantres
-Pont des Chantres
-Pont-aux-Chantres
-POP
+polémogène
 popiste
 populaire
 popularisme
@@ -1607,14 +1579,14 @@ populationnisme
 populisme
 populiste
 portugaisisme
+post-France
 post-factuel
 post-fascisme
-post-France
+post-vérité
 postcolonialisme
-postélectoral
 postfascisme
 postvérité
-post-vérité
+postélectoral
 potentat
 poutinisation
 poutiniser
@@ -1623,16 +1595,7 @@ pouvoir
 pouvoir suprême
 prachandiste
 praudisation
-prébendisme
-précampagne
-préélectoral
-préférendum
-préformateur
 premier ministrable
-Première République
-présidentiabilité
-présidium
-prévisionniste
 primaire
 primaire ouverte
 primo-ministériel
@@ -1661,28 +1624,34 @@ protochronisme
 protofascisme
 protofasciste
 provençalisme
-provisoire
 provocatrice
-PS
-PSDC
+prébendisme
+précampagne
+préformateur
+préférendum
+présidentiabilité
+présidium
+prévisionniste
+préélectoral
 pseudo-état
 psychiatrisation
 puissance mondiale
 purge
-QAnon
-Quad
+pécressiste
+pédagogie
+pédonégationnisme
+pépiste
+pérestroïka
+pétrodictature
+pôle
 quadripartisme
 quadripolarisation
-Quai d’Orsay
 questeur
 questeuse
-question
 question de confiance
 question sociale
 questrice
-Quint
 quoi qu’il en coûte
-R!
 rachisme
 radical
 radical-socialisme
@@ -1690,13 +1659,61 @@ radical-socialiste
 radicale-socialiste
 radicalisme
 radicaliste
-RAHOWA
 raison d’État
 ralliement
-rappeler
 rattachisme
 rattachiste
-RDA
+realpolitik
+rebeller
+rebellocratie
+recolonisation
+recomptage
+reconnaître
+reconquête industrielle
+reconstruction de l’État
+redevabilité
+redskin
+reductio ad Hitlerum
+redwashing
+refoulement
+reféodalisation
+regeste
+relance
+relations internationales
+remaniement
+remanier
+remplaciste
+remuant
+report de voix
+repos
+représentation
+représentation nationale
+repsychiatrisation
+restauration
+retour au pays
+revenant
+revenante
+revendiquer
+riniste
+ripoublicain
+ripoublique
+riviériste
+robespierrisme
+robespierriste
+robocratie
+rocardisme
+rouge-brun
+roumano-ukrainien
+roussellement
+ruZZe
+ruZZie
+rue de Solférino
+rue du Faubourg Saint-Honoré
+ruralicide
+ruralisme
+ruscisme
+ruzze
+règle
 réac-publicain
 réacosphère
 réacteur
@@ -1705,118 +1722,43 @@ réactionnaire
 réactrice
 réagisseur
 réalo
-realpolitik
 réassurantiel
-rebeller
-rebellocratie
 réchauffiste
-recolonisation
-recomptage
-reconnaître
-Reconquête
-reconquête industrielle
-Reconquête!
-reconstruction de l’État
-redevabilité
-redskin
-reductio ad Hitlerum
-redwashing
-rééducation
-rééligible
-rééquilibrage
-reféodalisation
-référendaire
-référendisme
-référendiste
 réforme
 réformisme
 réformiste
 réformite
-refoulement
+référendaire
+référendisme
+référendiste
 régence
-regeste
 régime
 régime des mollahs
 régime militaire
-règle
 réglementarisme
 réglementariste
 régner sans partage
-Reichstag
 réinformation
 réintroduction
-relance
-relations internationales
-remaniement
-remanier
-remplaciste
-remuant
-Renamo
 réponse ministérielle
-report de voix
-repos
-représentation
-représentation nationale
-repsychiatrisation
 républicanisation
 république
 république islamique
-République islamique d’Afghanistan
-République islamique d’Iran
 république maritime
 république populaire
 république sœur
 réserve
-résidence
-restauration
-retour au pays
 rétrograde
 rétropantouflage
-revenant
-revenante
-revendiquer
 révolution
 révolution arc-en-ciel
 révolution de palais
 révolutionnaire
 révolutionnarisme
 révolutionnariste
-RI
-RIC
-Rideau de bambou
-Rideau de fer
-riniste
-ripoublicain
-ripoublique
-riviériste
-RN
-Robespierre
-robespierrisme
-robespierriste
-robocratie
-rocardisme
-rose
-rouge
-rouge-brun
-roumano-ukrainien
-roussellement
-RP
-RSS
-Rue Cambon
-Rue de Grenelle
-Rue de Montpensier
-rue de Solférino
-Rue de Solférino
-Rue de Valois
-Rue de Varenne
-rue du Faubourg Saint-Honoré
-ruralicide
-ruralisme
-ruscisme
-ruzze
-ruZZe
-ruZZie
-Ruzzie
+rééducation
+rééligible
+rééquilibrage
 sage
 salazarisme
 salutiste
@@ -1825,41 +1767,21 @@ sans étiquette
 saoudisation
 sarkographie
 sarkozisme
-scène internationale
 scrutin
 scrutin de liste
 scrutin majoritaire
 scrutin majoritaire uninominal
-S.D.N.
-SE
+scène internationale
 se droitiser
-sécessionnisme
 secret d’État
 secrétaire d’État
 sectophobie
-sécularisme
-sécuritaire
-sécuritarisme
-sécurité alimentaire
-sécuritisation
-sécurocratie
 self-government
 semi-présidentiel
-sénateur
-sénateur-maire
-sénatoriale
-sénatoriat
-sénatrice
 sendérisme
 sendériste
-Sentier lumineux
 sentiment national
-Séoul
-séparatisme
-séparatiste
 serpent monétaire
-SFIO
-Shâm
 sinn-feiner
 sinophobie
 sit-in
@@ -1868,8 +1790,6 @@ slavophile
 slavophilisme
 slogan
 smart-power
-Smic
-SO
 soc-dem
 social
 social-démocratie
@@ -1877,18 +1797,16 @@ social-libéral
 social-libéralisme
 social-nationalisme
 socialaud
-Sociale
 socialisant
-socialisé
 socialisme arabe
 socialisme chrétien
 socialisme scientifique
-sociétal
-Société des Nations
+socialisé
 socio
 sociobiologie
 sociocratie
 sociolâtrie
+sociétal
 solidaire
 solidarisme
 solidariste
@@ -1896,7 +1814,6 @@ somalisation
 sondageocratie
 sondagier
 sonderweg
-Sonderweg
 sondocratie
 sonnette d’alarme
 sortition
@@ -1905,7 +1822,6 @@ soupier
 sous les ors de la république
 souveraineté nationale
 soviet
-Soviet
 soviétique
 speaker
 spencérisme
@@ -1914,15 +1830,13 @@ spontanéiste
 squadrisme
 stato-centrique
 statolâtrie
-stérilisation
 stochastocratie
 stochocratie
 strasserisme
 stratocratie
 strauss-kahnisme
+stérilisation
 sud-africanité
-suédoise
-Suédoise
 suffisance alimentaire
 suffragant
 suffragante
@@ -1932,7 +1846,6 @@ suffrage universel indirect
 suffragette
 suffragisme
 suivisme
-sujet
 sujette
 superpuissance
 supra-étatique
@@ -1944,29 +1857,39 @@ surreprésentation
 survivalisme
 suspendre
 suspension des services publics
+suédoise
 swadeshisme
 swarajisme
-système
-SAC
 système de crédit social
 système international
+sécessionnisme
+sécularisme
+sécuritaire
+sécuritarisme
+sécuritisation
+sécurité alimentaire
+sécurocratie
+sénateur
+sénateur-maire
+sénatoriale
+sénatoriat
+sénatrice
+séparatisme
+séparatiste
 tactique du salami
 tankie
 taoiseach
 teach-in
-techno
 technocapitalisme
 technocrature
 technologie civique
 technoploutocratie
-télégouverner
 tellurocratie
-témoin
-tenir
 tenir pour
 terreur
 thalassocratie
 thatchérien
+thorézien
 théocratie
 théocratique
 théocratisation
@@ -1975,13 +1898,10 @@ théofascisme
 théologie de la libération
 théorie de l’hameçon
 théorie du fer à cheval
-thorézien
 tiberiste
 ticket
 tiers-mondisme
 timocratie
-tolérance
-Tonton
 tonyblairiser
 tory
 torysme
@@ -1994,22 +1914,18 @@ trade-unionisme
 traditionalisme
 traiter
 transcourant
-transétatique
 transeuropéen
 transfert de politiques publiques
 transformisme
 transitologie
 transpartisan
-travail
+transétatique
 tree sitting
-très-humble adresse
-Trésor public
 triangulaire
 trilogue
 tripartisme
 tripartite
 triumvirat
-troïka
 troisanniste
 troisième couteau
 troisième position
@@ -2021,6 +1937,7 @@ trotsko
 trotskyser
 trotskysme
 trotzkisme
+troïka
 trublion
 trudeauisme
 trudeauiste
@@ -2030,6 +1947,7 @@ trumpisme
 trumpiste
 trumpophobie
 trussien
+très-humble adresse
 tsariste
 tunisianité
 tupamara
@@ -2037,20 +1955,22 @@ tupamaro
 tyranne
 tyrannie des minorités
 tyranniser
+télégouverner
+témoin
 ukase
 ukronazi
 ultra droite
-ultra-royaliste
 ultra-droite
 ultra-libéral
+ultra-royaliste
 ultra-tory
 ultracisme
 ultraconservateur
 ultraconservatrice
 ultradroite
 ultragauche
-ultraïsme
 ultralibéral
+ultraïsme
 umma
 unanimiste
 une et indivisible
@@ -2059,8 +1979,6 @@ unicaméralisme
 unification
 unilatéraliste
 union
-Union africaine
-Union française
 union nationale
 union personnelle
 union réelle
@@ -2068,12 +1986,9 @@ union sacrée
 unipartite
 unipolaire
 unipolarité
-UNITA
 unitaire
 unitarisme
 université d’été
-UNR
-UP
 urbicide
 uribisme
 vague bleue
@@ -2084,12 +1999,7 @@ valeur opposée
 valletousien
 vallsiste
 valoisien
-VDB
 veauter
-vérification
-vérité alternative
-vert
-vétocratie
 vice-chancelier
 violence
 vipère lubrique
@@ -2097,14 +2007,15 @@ virilisme
 vivre ensemble
 vivre-ensemble
 vivrensemblisme
-voïévode
 voter avec ses pieds
+voïévode
+vérification
+vérité alternative
+vétocratie
 wallingant
 wallingantisme
-Wallonie
 webcampagne
 weimarisation
-Westminster
 whig
 whip
 wilsonisme
@@ -2114,21 +2025,94 @@ wokisme
 wokiste
 xénocrate
 xénocratique
-Yakoutie
 yougoslavisme
-Z0ZZ
 zadisme
+zemmour
 zemmourisation
 zemmourisme
-Zemmouristan
-zemmour
 zimmerwaldien
 zimmerwaldienne
 zimmerwaldisme
 zimmerwaldiste
 zone d’influence
 zone d’urgence migratoire
-ZOZZ
 zozzer
 zwastika
 zyuganovisme
+Échiquier
+Élysée
+État
+État bleu
+État dans l’État
+État défaillant
+État failli
+État fragile
+État français
+État policier
+État profond
+État rouge
+État-DRS
+État-SM
+État-charnière
+État-nation
+État-nounou
+État-parti
+État-providence
+État-tribal
+États-Unis d’Europe
+à gauche
+éclosion généralisée
+éco-féminisme
+éco-vandalisme
+écofascisme
+écoféminisme
+écoféministe
+écolo-macroniste
+écologie
+écologie politique
+écologie profonde
+écologie superficielle
+économie de marché
+économie sociale de marché
+économie socialiste de marché
+écosocialisme
+écoterrorisme
+éditocratie
+égalisateur de puissance
+égalitaire
+égalitariste
+égalité
+égalité des chances
+égalité hommes-femmes
+égocratie
+égyptianisme
+électeur
+électeur-éligible
+électoralisme
+électoraliste
+électrice
+élire
+élitiste
+élu local
+élyséen
+élément de langage
+énarchique
+énarchisme
+épistocratie
+épistocratique
+épistémocratie
+épurateur
+épuratrice
+équation
+équipollence
+établi
+établie
+état
+état d’urgence
+état d’urgence sanitaire
+état-nation
+éthico-artistique
+éveilliste
+îlot
+óðalisme
+óðaliste
