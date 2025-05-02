@@ -219,7 +219,7 @@ async def on_message(message):
                 await AutoSignalementAlerte(content_message_no_lower,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Politique")
                 
         if message.channel.id == SALON_PARTAGE_ACTU:
-            if (message.content).contains('http'):
+            if 'http' in message.content:
                 await Thread.send(content="test")
 
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
