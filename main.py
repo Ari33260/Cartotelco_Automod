@@ -10,6 +10,7 @@ import random
 # VARIABLES GLOBALES (PARAMETRES)
 ID_CANAL_AUTOSIGNALEMENT = 1223257795571351572
 SALON_SUIVI_MESSAGES = 1223280408939073536
+SALON_PARTAGE_ACTU = 1298716918567665765
 RolesByPass = [1012814021344374948,1012813457734770799]
 Listes_mots = {}
 
@@ -216,6 +217,10 @@ async def on_message(message):
                     liste_mots.append(mot)
                 mots = ','.join(liste_mots)
                 await AutoSignalementAlerte(content_message_no_lower,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Politique")
+                
+        if message.channel.id == SALON_PARTAGE_ACTU:
+            if (message.content).contains('http'):
+                await Thread.send(content="test")
 
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
     canal_alerte = bot.get_channel(ID_CANAL_AUTOSIGNALEMENT)
