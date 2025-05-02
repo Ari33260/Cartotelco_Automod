@@ -165,7 +165,7 @@ async def on_message_edit(before, after):
     if after.channel.id == SALON_PARTAGE_ACTU:
         if 'http' in after.content:
             print("Oui, tu es dans la condition")
-            print(f"L'embed est : {after.embeds}")
+            print(f"L'embed est : {after.embeds[0].title}")
             # await message.create_thread(name="test")
         else:
             print("Non, tu n'es pas dans la condition")
