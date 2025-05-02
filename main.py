@@ -161,6 +161,14 @@ async def on_message_edit(before, after):
         await canal_alerte.send(embed=embed)
     else:
         print("Le salon  de log défini est incorrect ! La modification n'a pas pu être logué !")
+    
+    if after.channel.id == SALON_PARTAGE_ACTU:
+        if 'http' in after.content:
+            print("Oui, tu es dans la condition")
+            print(f"L'embed est : {after.embeds}")
+            # await message.create_thread(name="test")
+        else:
+            print("Non, tu n'es pas dans la condition")
 
 @bot.event
 async def on_message_delete(message):
@@ -218,13 +226,6 @@ async def on_message(message):
                 mots = ','.join(liste_mots)
                 await AutoSignalementAlerte(content_message_no_lower,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Politique")
                 
-        if message.channel.id == SALON_PARTAGE_ACTU:
-            if 'http' in message.content:
-                print("Oui, tu es dans la condition")
-                print(f"L'embed est : {message.embeds}")
-                # await message.create_thread(name="test")
-            else:
-                print("Non, tu n'es pas dans la condition")
 
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
     canal_alerte = bot.get_channel(ID_CANAL_AUTOSIGNALEMENT)
