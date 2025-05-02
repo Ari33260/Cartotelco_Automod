@@ -220,7 +220,10 @@ async def on_message(message):
                 
         if message.channel.id == SALON_PARTAGE_ACTU:
             if 'http' in message.content:
+                print("Oui, tu es dans la condition")
                 await Thread.send(content="test")
+            else:
+                print("Non, tu n'es pas dans la condition")
 
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
     canal_alerte = bot.get_channel(ID_CANAL_AUTOSIGNALEMENT)
