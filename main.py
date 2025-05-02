@@ -221,7 +221,7 @@ async def on_message(message):
         if message.channel.id == SALON_PARTAGE_ACTU:
             if 'http' in message.content:
                 print("Oui, tu es dans la condition")
-                await discord.Message.create_thread(name="test")
+                await discord.Message.create_thread(self, name="test")
             else:
                 print("Non, tu n'es pas dans la condition")
 
