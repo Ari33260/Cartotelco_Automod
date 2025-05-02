@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 from datetime import datetime
 import subprocess
+import random
 
 # VARIABLES GLOBALES (PARAMETRES)
 ID_CANAL_AUTOSIGNALEMENT = 1223257795571351572
@@ -76,7 +77,7 @@ print("Compilation des motifs regex pour la catégorie politique : OK !")
 intents = discord.Intents.default()
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='!',intents=intents)
+bot = commands.Bot(command_prefix='!', intents=intents)
 
 # arg1 = mot à supprimer du dictionnaire
 # arg2 = catégorie
@@ -131,11 +132,13 @@ async def addbl(ctx, *args):
         else:
             await ctx.send(f"Ce dictionnaire ({categorie}) externe n'existe pas !")
     else:
-        await ctx.send(f"Le nombre d'argument est insuffisant !")
-        await ctx.send(f"^!addbl [mots ou expressions à ajouter] [catégorie]")
-        await ctx.send(f"Exemple :")
-        await ctx.send(f"^!addbl Marine Le Pen,Zemmour,Macron Politique")
-
+        await ctx.send(f"Le nombre d'argument est insuffisant !\n^!addbl [mots ou expressions à ajouter] [catégorie]\nExemple :\n^!addbl Marine Le Pen,Zemmour,Macron Politique")
+        
+@bot.command()
+async def test(ctx):
+    mots = ["Mot1","Mot2"]
+    await ctx.send("Clique sur le bouton en bas pour tester l'intéraction ! \n oaramètre __init__(timeout=None)", view=TestButton(mots))
+    
 @bot.event
 async def on_ready():
     print(f'Logged on as {bot.user}!')
@@ -155,6 +158,23 @@ async def on_message_edit(before, after):
         embed.add_field(name="Après", value=f"> {after.content}", inline=True)
             
         await canal_alerte.send(embed=embed)
+    else:
+        print("Le salon  de log défini est incorrect ! La modification n'a pas pu être logué !")
+
+@bot.event
+async def on_message_delete(message):
+    canal_alerte = bot.get_channel(SALON_SUIVI_MESSAGES)
+    if canal_alerte:
+        idSuppression = await IdGenerator()
+        embed = discord.Embed(
+            description=f"<@{message.author.id}> a supprimé son message ({message.jump_url}) dans le salon <#{message.channel.id}>",
+            color=discord.Color.default()
+        )
+        embed.set_author(name=f"❌ Suppression n°{idSuppression}")
+        embed.add_field(name="Message supprimé", value=f"> {message.content}")
+        
+        await canal_alerte.send(embed=embed)
+        
     else:
         print("Le salon  de log défini est incorrect ! La modification n'a pas pu être logué !")
 
@@ -223,7 +243,7 @@ async def IdGenerator():
     return identifiant
 
 async def MajListe(ctx, categorie):
-    path = f"AutoSignalement/dictionnaire_{categorie}.txt.copy"
+    path = f"AutoSignalement/dictionnaire_{categorie}.txt"
     await ctx.send(f"Le path du dictionnaire est : {path}")
     if os.path.isfile(path) == True:
         with open(path, "r") as fichier:
@@ -238,5 +258,33 @@ async def MajListe(ctx, categorie):
     else:
          await ctx.send(f"Le dictionnaire n'existe pas !")
          
+class TestButton(discord.ui.View):
+    def __init__(self, mots):
+        super().__init__(timeout=None)
+        self.mots = mots
+        #Solution temporaire
+        identifiant = str(random.randint(0, 10000))
+        for mot in mots:
+            bouton = MonBouton(label=f"Supprimer {mot}", custom_id=f"{mot}+{identifiant}", style=discord.ButtonStyle.danger)
+            self.add_item(bouton)
         
+class MonBouton(discord.ui.Button):  
+    async def callback(self, interaction):
+        mot = self.custom_id.split('+')[0]
+        await interaction.response.send_message(f"Tu as cliqué sur {mot}",ephemeral=True)
 bot.run(TOKEN)
+
+
+class MaClasse():
+    def __init__(self, valeur1, valeur2):
+        self.valeur1 = valeur1
+        self.valeur2 = valeur2
+        
+    def MaFonctionMaClasse():
+        #Je veux appeler ici la fonction "FonctionMain"
+        FonctionMain(valeur1,valeur2)
+        
+def FonctionMain(valeur1,valeur2):
+    #Instruction
+    return 0
+    
