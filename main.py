@@ -232,7 +232,7 @@ async def on_message(message):
         if message.channel.id == SALON_PARTAGE_ACTU:
             url = extractUrl(message.content)
             if url:
-                title = getUrlTitle(url)}
+                title = getUrlTitle(url)
                 message.create_thread(name=title)
             else:
                 try:
