@@ -270,8 +270,12 @@ async def getUrlTitle(url):
     # Add 'https://' if the URL doesn't have a scheme
     if not url.startswith("http://") and not url.startswith("https://"):
         url = "https://" + url
+    # Ajout header http car sur certains sites ils sont obligatoires
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:115.0) Gecko/20100101 Firefox/115.0"
+    }
 
-    async with aiohttp.ClientSession() as session:
+    async with aiohttp.ClientSession(headers=headers) as session:
         async with session.get(url, ssl=False) as response:
             response.raise_for_status()
             html = await response.text()
