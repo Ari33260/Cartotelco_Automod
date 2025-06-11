@@ -233,17 +233,17 @@ async def on_message(message):
             url = extractUrl(message.content)
             if url:
                 title = getUrlTitle(url)
-                message.create_thread(name=title)
+                await message.create_thread(name=title)
             else:
                 try:
-                    message.author.send(
+                    await message.author.send(
                         "🚫 Ton message a été supprimé car il ne contenait pas d'URL, ce qui est requis dans ce salon."
                     )
                 except discord.Forbidden:
                     # Impossible de DM l'utilisateur
                     pass
                 
-                message.delete()
+                await message.delete()
 
 
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
