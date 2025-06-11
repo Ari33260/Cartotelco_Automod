@@ -284,11 +284,11 @@ def getUrlTitle(url):
             return title
         else:
             print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
-            id = idGenerator()
+            id = IdGenerator()
             return f"Partage n°{id}"
     else: 
             print(f"[DEBUG] : Code retour différent de 200 \n")
-            id = idGenerator()
+            id = IdGenerator()
             return f"Partage n°{id}"
 def extractUrl(message: str):
     url_regex = r'(https?://[^\s]+|www\.[^\s]+)'
