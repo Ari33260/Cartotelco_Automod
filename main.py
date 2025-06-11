@@ -6,6 +6,12 @@ from dotenv import load_dotenv
 from datetime import datetime
 import subprocess
 import random
+import requets
+import urllib3
+from bs4 import BeautifulSoup
+
+# Eviter les warning
+urllib3.disable_warnings()
 
 # VARIABLES GLOBALES (PARAMETRES)
 ID_CANAL_AUTOSIGNALEMENT = 1223257795571351572
@@ -220,8 +226,11 @@ async def on_message(message):
                     liste_mots.append(mot)
                 mots = ','.join(liste_mots)
                 await AutoSignalementAlerte(content_message_no_lower,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Politique")
-    if message.channel.id == SALON_PARTAGE_ACTU and 'http' in message.content and len(message.embeds) > 0:
-        await message.create_thread(name=f"{message.embeds[0].title}")
+    if message.channel.id == SALON_PARTAGE_ACTU:
+        url = await extractUrl(message.content)
+        if url:
+            title = getUrlTitle(url)
+            message.create_thread(name=f"{title}")
 
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
     canal_alerte = bot.get_channel(ID_CANAL_AUTOSIGNALEMENT)
@@ -240,6 +249,38 @@ async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid
         await canal_alerte.send(embed=embed)
     else:
         print("Aucun salon de log a été défini ! Le signalement n'a pas pu être logué !")
+async def getUrlTitle(url):
+    url = url.strip()
+    print(f"[DEBUG] L'URL est : {url}")
+
+    # Add 'https://' if the URL doesn't have a scheme
+    if not URL.startswith("http://") and not URL.startswith("https://"):
+        URL = "https://" + URL
+
+    try:
+        response = requests.get(URL, verify=False)
+        response.raise_for_status()  # Raise an error if the request fails
+        soup = BeautifulSoup(response.text, 'html.parser')
+        title_tag = soup.find('title')
+    
+        if title_tag:
+            title = title_tag.get_text()
+            print(f"[DEBUG] Le titre est : {title}")
+            return title
+        else:
+            raise Exception("Title tag not found")
+        
+    except Exception as e:
+        print(f"[DEBUG] : Erreur lors de l'extraction du titre : {e} \n")
+        id = idGenerator()
+        return f"Partage n°{id}"
+
+async def extractUrl(message: str):
+    url_regex = r'(https?://[^\s]+|www\.[^\s]+)'
+    match = re.search(url_regex, message)
+    if match:
+        return match.group(0)
+    
         
 async def IdGenerator():
     maintenant = datetime.now()
