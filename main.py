@@ -156,7 +156,7 @@ async def on_message_edit(before, after):
     print(f"-------------------\nUn message a été modifié !\nDe : {before.author}\nID user : {before.author.id}\nID Salon : {before.channel.id}\nSalon : {before.channel} \nID : {before.id}\nLien du message : {before.jump_url}\nAvant : {before.content}\nAprès : {after.content}")
     canal_alerte = bot.get_channel(SALON_SUIVI_MESSAGES)
     if canal_alerte and before.content is not after.content:
-        idModification = await IdGenerator()
+        idModification = IdGenerator()
         embed = discord.Embed(
             description=f"<@{before.author.id}> a modifié son message ({before.jump_url}) dans le salon <#{before.channel.id}>",
             color=discord.Color.default()
@@ -176,7 +176,7 @@ async def on_message_edit(before, after):
 async def on_message_delete(message):
     canal_alerte = bot.get_channel(SALON_SUIVI_MESSAGES)
     if canal_alerte:
-        idSuppression = await IdGenerator()
+        idSuppression = IdGenerator()
         embed = discord.Embed(
             description=f"<@{message.author.id}> a supprimé son message ({message.jump_url}) dans le salon <#{message.channel.id}>",
             color=discord.Color.default()
@@ -249,7 +249,7 @@ async def on_message(message):
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
     canal_alerte = bot.get_channel(ID_CANAL_AUTOSIGNALEMENT)
     if canal_alerte:
-        idSignalement = await IdGenerator()
+        idSignalement = IdGenerator()
         # alerte = f"**Alerte !** L'utilisateur {auteur} a utilisé un mot interdit dans le message suivant : `{message}`"
         embed = discord.Embed(
             description=f"<@{userid}> a envoyé un message ({link_message}) qui est **interdit** dans le salon <#{channelid}>",
@@ -282,7 +282,7 @@ def getUrlTitle(url):
         return title
     else:
         print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
-        id = await idGenerator()
+        id = idGenerator()
         return f"Partage n°{id}"
 
 async def extractUrl(message: str):
@@ -292,7 +292,7 @@ async def extractUrl(message: str):
         return match.group(0)
     
         
-async def IdGenerator():
+def IdGenerator():
     maintenant = datetime.now()
     AnneeCourte =  str(int(maintenant.strftime("%Y"))-2000)
     MoisJourHeureMinuteSeconde = maintenant.strftime("%m%d%H%m%S")
