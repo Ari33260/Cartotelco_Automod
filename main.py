@@ -285,7 +285,7 @@ def getUrlTitle(url):
         id = idGenerator()
         return f"Partage n°{id}"
 
-async def extractUrl(message: str):
+def extractUrl(message: str):
     url_regex = r'(https?://[^\s]+|www\.[^\s]+)'
     match = re.search(url_regex, message)
     if match:
