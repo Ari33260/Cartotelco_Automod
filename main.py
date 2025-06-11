@@ -272,7 +272,7 @@ def getUrlTitle(url):
         url = "https://" + url
 
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, verify=False)
-    response.raise_for_status()  # Raise an error if the request fails
+    # response.raise_for_status()  # Raise an error if the request fails
 
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
