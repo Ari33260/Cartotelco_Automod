@@ -273,18 +273,23 @@ def getUrlTitle(url):
 
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, verify=False)
     response.raise_for_status()  # Raise an error if the request fails
-    soup = BeautifulSoup(response.text, 'html.parser')
-    title_tag = soup.find('title')
 
-    if title_tag:
-        title = title_tag.get_text()
-        print(f"[DEBUG] Le titre est : {title}")
-        return title
-    else:
-        print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
-        id = idGenerator()
-        return f"Partage n°{id}"
-
+    if response.status_code == 200:
+        soup = BeautifulSoup(response.text, 'html.parser')
+        title_tag = soup.find('title')
+    
+        if title_tag:
+            title = title_tag.get_text()
+            print(f"[DEBUG] Le titre est : {title}")
+            return title
+        else:
+            print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
+            id = idGenerator()
+            return f"Partage n°{id}"
+    else: 
+            print(f"[DEBUG] : Code retour différent de 200 \n")
+            id = idGenerator()
+            return f"Partage n°{id}"
 def extractUrl(message: str):
     url_regex = r'(https?://[^\s]+|www\.[^\s]+)'
     match = re.search(url_regex, message)
