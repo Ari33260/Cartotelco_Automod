@@ -271,7 +271,7 @@ def getUrlTitle(url):
     if not url.startswith("http://") and not url.startswith("https://"):
         url = "https://" + url
 
-    response = requests.get(url, verify=False)
+    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, verify=False)
     response.raise_for_status()  # Raise an error if the request fails
     soup = BeautifulSoup(response.text, 'html.parser')
     title_tag = soup.find('title')
