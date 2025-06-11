@@ -272,7 +272,13 @@ async def getUrlTitle(url):
         url = "https://" + url
     # Ajout header http car sur certains sites ils sont obligatoires
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:115.0) Gecko/20100101 Firefox/115.0"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:115.0) Gecko/20100101 Firefox/115.0",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Referer": url,  # parfois important
+        "Connection": "keep-alive",
+        "DNT": "1",  # Do Not Track
+        "Upgrade-Insecure-Requests": "1"
     }
 
     async with aiohttp.ClientSession(headers=headers) as session:
