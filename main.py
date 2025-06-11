@@ -230,20 +230,20 @@ async def on_message(message):
 
         # PARTIE PARTAGE ACTU
         if message.channel.id == SALON_PARTAGE_ACTU:
-            url = await extractUrl(message.content)
+            url = extractUrl(message.content)
             if url:
-                title = f"{await getUrlTitle(url)}"
-                await message.create_thread(name=title)
+                title = getUrlTitle(url)}
+                message.create_thread(name=title)
             else:
                 try:
-                    await message.author.send(
+                    message.author.send(
                         "🚫 Ton message a été supprimé car il ne contenait pas d'URL, ce qui est requis dans ce salon."
                     )
                 except discord.Forbidden:
                     # Impossible de DM l'utilisateur
                     pass
                 
-                await message.delete()
+                message.delete()
 
 
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
@@ -263,30 +263,17 @@ async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid
         await canal_alerte.send(embed=embed)
     else:
         print("Aucun salon de log a été défini ! Le signalement n'a pas pu être logué !")
-async def getUrlTitle(url):
+def getUrlTitle(url):
     url = url.strip()
     print(f"[DEBUG] L'URL est : {url}")
 
     # Add 'https://' if the URL doesn't have a scheme
     if not url.startswith("http://") and not url.startswith("https://"):
         url = "https://" + url
-    # Ajout header http car sur certains sites ils sont obligatoires
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:115.0) Gecko/20100101 Firefox/115.0",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.5",
-        "Referer": url,  # parfois important
-        "Connection": "keep-alive",
-        "DNT": "1",  # Do Not Track
-        "Upgrade-Insecure-Requests": "1"
-    }
 
-    async with aiohttp.ClientSession(headers=headers) as session:
-        async with session.get(url, ssl=False) as response:
-            response.raise_for_status()
-            html = await response.text()
-    
-    soup = await BeautifulSoup(html, 'html.parser')
+    response = requests.get(URL, verify=False)
+    response.raise_for_status()  # Raise an error if the request fails
+    soup = BeautifulSoup(response.text, 'html.parser')
     title_tag = soup.find('title')
 
     if title_tag:
@@ -295,7 +282,7 @@ async def getUrlTitle(url):
         return title
     else:
         print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
-        id = await idGenerator()
+        id = idGenerator()
         return f"Partage n°{id}"
 
 async def extractUrl(message: str):
