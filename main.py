@@ -282,7 +282,7 @@ def getUrlTitle(url):
         return title
     else:
         print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
-        id = idGenerator()
+        id = await idGenerator()
         return f"Partage n°{id}"
 
 async def extractUrl(message: str):
