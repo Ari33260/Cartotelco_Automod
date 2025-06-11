@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from datetime import datetime
 import subprocess
 import random
-import requets
+import requests
 import urllib3
 from bs4 import BeautifulSoup
 
