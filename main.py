@@ -7,6 +7,7 @@ from datetime import datetime
 import subprocess
 import random
 import requests
+import aiohttp
 import urllib3
 from bs4 import BeautifulSoup
 
@@ -231,7 +232,7 @@ async def on_message(message):
         if message.channel.id == SALON_PARTAGE_ACTU:
             url = await extractUrl(message.content)
             if url:
-                title = f"{getUrlTitle(url)}"
+                title = f"{await getUrlTitle(url)}"
                 await message.create_thread(name=title)
             else:
                 try:
@@ -270,9 +271,12 @@ async def getUrlTitle(url):
     if not url.startswith("http://") and not url.startswith("https://"):
         url = "https://" + url
 
-    response = requests.get(URL, verify=False)
-    response.raise_for_status()  # Raise an error if the request fails
-    soup = BeautifulSoup(response.text, 'html.parser')
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, ssl=False) as response:
+            response.raise_for_status()
+            html = await response.text()
+    
+    soup = await BeautifulSoup(html, 'html.parser')
     title_tag = soup.find('title')
 
     if title_tag:
@@ -281,7 +285,7 @@ async def getUrlTitle(url):
         return title
     else:
         print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
-        id = idGenerator()
+        id = await idGenerator()
         return f"Partage n°{id}"
 
 async def extractUrl(message: str):
