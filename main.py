@@ -232,7 +232,7 @@ async def on_message(message):
             title = getUrlTitle(url)
             message.create_thread(name=f"{title}")
         else:
-            await message.delete()
+            await message.response.send_message(f"Attention, le message que tu as envoyé ne contient pas d'URL !, il a par conséquent était supprimé !",ephemeral=True)
 
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
     canal_alerte = bot.get_channel(ID_CANAL_AUTOSIGNALEMENT)
@@ -256,24 +256,20 @@ async def getUrlTitle(url):
     print(f"[DEBUG] L'URL est : {url}")
 
     # Add 'https://' if the URL doesn't have a scheme
-    if not URL.startswith("http://") and not URL.startswith("https://"):
-        URL = "https://" + URL
+    if not url.startswith("http://") and not url.startswith("https://"):
+        url = "https://" + url
 
-    try:
-        response = requests.get(URL, verify=False)
-        response.raise_for_status()  # Raise an error if the request fails
-        soup = BeautifulSoup(response.text, 'html.parser')
-        title_tag = soup.find('title')
-    
-        if title_tag:
-            title = title_tag.get_text()
-            print(f"[DEBUG] Le titre est : {title}")
-            return title
-        else:
-            raise Exception("Title tag not found")
-        
-    except Exception as e:
-        print(f"[DEBUG] : Erreur lors de l'extraction du titre : {e} \n")
+    response = requests.get(URL, verify=False)
+    response.raise_for_status()  # Raise an error if the request fails
+    soup = BeautifulSoup(response.text, 'html.parser')
+    title_tag = soup.find('title')
+
+    if title_tag:
+        title = title_tag.get_text()
+        print(f"[DEBUG] Le titre est : {title}")
+        return title
+    else:
+        print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
         id = idGenerator()
         return f"Partage n°{id}"
 
