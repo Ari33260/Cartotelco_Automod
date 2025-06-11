@@ -231,7 +231,7 @@ async def on_message(message):
         if message.channel.id == SALON_PARTAGE_ACTU:
             url = await extractUrl(message.content)
             if url:
-                title = getUrlTitle(url)
+                title = f"{getUrlTitle(url)}"
                 await message.create_thread(name=title)
             else:
                 try:
