@@ -226,13 +226,22 @@ async def on_message(message):
                     liste_mots.append(mot)
                 mots = ','.join(liste_mots)
                 await AutoSignalementAlerte(content_message_no_lower,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Politique")
-    if message.channel.id == SALON_PARTAGE_ACTU:
-        url = await extractUrl(message.content)
-        if url:
-            title = getUrlTitle(url)
-            message.create_thread(name=f"{title}")
-        else:
-            await message.response.send_message(f"Attention, le message que tu as envoyé ne contient pas d'URL !, il a par conséquent était supprimé !",ephemeral=True)
+        if message.channel.id == SALON_PARTAGE_ACTU:
+            url = await extractUrl(message.content)
+            if url:
+                title = getUrlTitle(url)
+                await message.create_thread(name=title)
+            else:
+                try:
+                    await message.author.send(
+                        "🚫 Ton message a été supprimé car il ne contenait pas d'URL, ce qui est requis dans ce salon."
+                    )
+                except discord.Forbidden:
+                    # Impossible de DM l'utilisateur
+                    pass
+                
+                await message.delete()
+
 
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
     canal_alerte = bot.get_channel(ID_CANAL_AUTOSIGNALEMENT)
