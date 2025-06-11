@@ -226,6 +226,8 @@ async def on_message(message):
                     liste_mots.append(mot)
                 mots = ','.join(liste_mots)
                 await AutoSignalementAlerte(content_message_no_lower,message.author,message.jump_url,message.channel.id,message.author.id,mots,"Politique")
+
+        # PARTIE PARTAGE ACTU
         if message.channel.id == SALON_PARTAGE_ACTU:
             url = await extractUrl(message.content)
             if url:
