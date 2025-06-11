@@ -231,6 +231,8 @@ async def on_message(message):
         if url:
             title = getUrlTitle(url)
             message.create_thread(name=f"{title}")
+        else:
+            await message.delete()
 
 async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid, motsIdentifies, categorie):
     canal_alerte = bot.get_channel(ID_CANAL_AUTOSIGNALEMENT)
