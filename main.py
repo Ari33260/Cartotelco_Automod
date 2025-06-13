@@ -326,6 +326,7 @@ async def MajListe(ctx, categorie):
         
 async def sendLog(typeError: str, markCritical: int, body: str, admMention: bool):
     id = IdGenerator()
+    canal_log = bot.get_channel(ID_CANAL_LOG)
     
     embed = discord.Embed(
         description=f"Type erreur : {typeError} \nCritique de l'erreur : {markCritical} / 5",
@@ -335,7 +336,7 @@ async def sendLog(typeError: str, markCritical: int, body: str, admMention: bool
     embed.add_field(name="Contenu", value=f"> {body}", inline=False)
     if admMention:
         embed.add_field(name="Equipe concernée", value=f"> <@&1012814021344374948>", inline=True)
-    await ID_CANAL_LOG.send(embed=embed)
+    await canal_log.send(embed=embed)
     
          
 class TestButton(discord.ui.View):
