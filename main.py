@@ -292,7 +292,7 @@ async def getUrlTitle(url):
     else: 
             print(f"[DEBUG] : Code retour différent de 200 \n")
             id = IdGenerator()
-            await sentLogs(TypeError = "Erreur programme", markCritical=3, body=f"Le code de retour HTTP n'est pas celui attendu.\nCode retour HTTP : {response.status_code}\nTitre du thread potentiel : Partage n°{id}", admMention=False)
+            await sendLog(TypeError = "Erreur programme", markCritical=3, body=f"Le code de retour HTTP n'est pas celui attendu.\nCode retour HTTP : {response.status_code}\nTitre du thread potentiel : Partage n°{id}", admMention=False)
             return f"Partage n°{id}"
 def extractUrl(message: str):
     url_regex = r'(https?://[^\s]+|www\.[^\s]+)'
@@ -332,7 +332,7 @@ async def sendLog(typeError: str, markCritical: int, body: str, admMention: bool
         description=f"Type erreur : {typeError} \nCritique de l'erreur : {markCritical} / 5",
         color=discord.Color.default()
     )
-    embed.set_author(name=f"Logs n°{id}")
+    embed.set_author(name=f"Log n°{id}")
     embed.add_field(name="Contenu", value=f"> {body}", inline=False)
     if admMention:
         embed.add_field(name="Equipe concernée", value=f"> <@&1012814021344374948>", inline=True)
