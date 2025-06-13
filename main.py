@@ -287,12 +287,12 @@ async def getUrlTitle(url):
         else:
             print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
             id = IdGenerator()
-            await sendLog(TypeError = "Erreur programme", markCritical=4, body=f"Le programme n' a pas réussi à extraire le titre de l'URL : {url}.\nCode retour HTTP : 200\nTitre du thread potentiel : Partage n°{id}", admMention=True)
+            await sendLog(typeError = "Erreur programme", markCritical=4, body=f"Le programme n' a pas réussi à extraire le titre de l'URL : {url}.\nCode retour HTTP : 200\nTitre du thread potentiel : Partage n°{id}", admMention=True)
             return f"Partage n°{id}"
     else: 
             print(f"[DEBUG] : Code retour différent de 200 \n")
             id = IdGenerator()
-            await sendLog(TypeError = "Erreur programme", markCritical=3, body=f"Le code de retour HTTP n'est pas celui attendu.\nCode retour HTTP : {response.status_code}\nTitre du thread potentiel : Partage n°{id}", admMention=False)
+            await sendLog(typeError = "Erreur programme", markCritical=3, body=f"Le code de retour HTTP n'est pas celui attendu.\nCode retour HTTP : {response.status_code}\nTitre du thread potentiel : Partage n°{id}", admMention=False)
             return f"Partage n°{id}"
 def extractUrl(message: str):
     url_regex = r'(https?://[^\s]+|www\.[^\s]+)'
