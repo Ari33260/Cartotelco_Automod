@@ -333,7 +333,7 @@ async def sendLog(typeError: str, markCritical: int, body: str, admMention: bool
     )
     embed.set_author(name=f"Logs n°{id}")
     embed.add_field(name="Contenu", value=f"> {body}", inline=False)
-    if addMention:
+    if admMention:
         embed.add_field(name="Equipe concernée", value=f"> <@&1012814021344374948>", inline=True)
     await ID_CANAL_LOG.send(embed=embed)
     
