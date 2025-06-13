@@ -16,6 +16,7 @@ urllib3.disable_warnings()
 
 # VARIABLES GLOBALES (PARAMETRES)
 ID_CANAL_AUTOSIGNALEMENT = 1223257795571351572
+ID_CANAL_LOG = 1012816121574998026
 SALON_SUIVI_MESSAGES = 1223280408939073536
 SALON_PARTAGE_ACTU = 1298716918567665765
 RolesByPass = [1012814021344374948,1012813457734770799]
@@ -239,6 +240,7 @@ async def on_message(message):
                     await message.author.send(
                         "🚫 Ton message a été supprimé car il ne contenait pas d'URL, ce qui est requis dans ce salon."
                     )
+                    await sendLog(typeError="Informatif", markCritical=1, body=f"L'utilisateur {message.author} a été averti car il a envoyé un message sans URL dans #PartageActus.", admMention=False)
                 except discord.Forbidden:
                     # Impossible de DM l'utilisateur
                     pass
@@ -285,10 +287,12 @@ def getUrlTitle(url):
         else:
             print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
             id = IdGenerator()
+            await sendLog(TypeError = "Erreur programme", markCritical=4, body=f"Le programme n' a pas réussi à extraire le titre de l'URL : {url}.\nCode retour HTTP : 200\nTitre du thread potentiel : Partage n°{id}", admMention=True)
             return f"Partage n°{id}"
     else: 
             print(f"[DEBUG] : Code retour différent de 200 \n")
             id = IdGenerator()
+            await sentLogs(TypeError = "Erreur programme", markCritical=3, body=f"Le code de retour HTTP n'est pas celui attendu.\nCode retour HTTP : {response.status_code}\nTitre du thread potentiel : Partage n°{id}", admMention=False)
             return f"Partage n°{id}"
 def extractUrl(message: str):
     url_regex = r'(https?://[^\s]+|www\.[^\s]+)'
@@ -319,6 +323,20 @@ async def MajListe(ctx, categorie):
             await ctx.send(f"Compilation des motifs regex pour la catégorie {categorie} : OK !")
     else:
          await ctx.send(f"Le dictionnaire n'existe pas !")
+        
+async def sendLog(typeError: str, markCritical: int, body: str, admMention: bool):
+    id = IdGenerator()
+    
+    embed = discord.Embed(
+        description=f"Type erreur : {typeError} \nCritique de l'erreur : {markCritical} / 5",
+        color=discord.Color.default()
+    )
+    embed.set_author(name=f"Logs n°{id}")
+    embed.add_field(name="Contenu", value=f"> {body}", inline=False)
+    if addMention:
+        embed.add_field(name="Equipe concernée", value=f"> <@&1012814021344374948>", inline=True)
+    await ID_CANAL_LOG.send(embed=embed)
+    
          
 class TestButton(discord.ui.View):
     def __init__(self, mots):
