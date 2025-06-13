@@ -233,7 +233,7 @@ async def on_message(message):
         if message.channel.id == SALON_PARTAGE_ACTU:
             url = extractUrl(message.content)
             if url:
-                title = getUrlTitle(url)
+                title = await getUrlTitle(url)
                 await message.create_thread(name=title)
             else:
                 try:
@@ -265,7 +265,7 @@ async def AutoSignalementAlerte(message, auteur, link_message, channelid, userid
         await canal_alerte.send(embed=embed)
     else:
         print("Aucun salon de log a été défini ! Le signalement n'a pas pu être logué !")
-def getUrlTitle(url):
+async def getUrlTitle(url):
     url = url.strip()
     print(f"[DEBUG] L'URL est : {url}")
 
