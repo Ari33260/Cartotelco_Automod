@@ -22,7 +22,7 @@ CHANNEL_IDS = [
     1012782593307070554, # bistro
     1012751244554678382, # discu telco
     1012750995371065354, # speedtest
-    1176096736410869840, # photos infra 
+    1176096736410869840, # photos infra
     
 ]
 
@@ -76,19 +76,19 @@ async def on_ready():
         with open(filename, mode="w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(
                 f,
-                fieldnames=["key", "id", "pseudo original", "pseudo serveur", "arrivé le", "client officiel", "nombre de message", "dernier message le"]
+                fieldnames=["key", "id", "pseudo_original", "pseudo_serveur", "arrivee", "client_officiel", "nbr_messages", "dernier_message"]
             )
             writer.writeheader()
             for key, info in data.items():
                 writer.writerow({
                     "key": key,
                     "id": info["id"],
-                    "name": info["name"],
-                    "nick": info["nick"],
-                    "joined_at": info["joined_at"],
-                    "system": info["system"],
-                    "message_count": info["message_count"],
-                    "last_message": info["last_message"].isoformat() if info["last_message"] else None,
+                    "pseudo_original": info["name"],
+                    "pseudo_serveur": info["nick"],
+                    "arrivee": info["joined_at"],
+                    "client_officiel": info["system"],
+                    "nbr_messages": info["message_count"],
+                    "dernier_message": info["last_message"].isoformat() if info["last_message"] else None,
                 })
 
         print(f"📂 Données enregistrées dans {filename}")
