@@ -16,6 +16,10 @@ intents.members = True
 
 client = discord.Client(intents=intents)
 
+CHANNEL_IDS = [
+    1012741568031100931,
+]
+
 @client.event
 async def on_ready():
     print(f'Logged on as {client.user}!')
@@ -23,7 +27,7 @@ async def on_ready():
     for guild in client.guilds:
         print(f"Traitement de la guilde : {guild.name} ({guild.id})")
 
-        # Dictionnaire pour stocker les infos des membres
+        # Dictionnaire pour stocker les infos
         data = {}
 
         for member in guild.members:
@@ -38,10 +42,16 @@ async def on_ready():
                 "last_message": None,
             }
 
-        # Parcours de l’historique des salons texte
-        for channel in guild.text_channels:
+        # Scan uniquement des salons spécifiés
+        for channel_id in CHANNEL_IDS:
+            channel = guild.get_channel(channel_id)
+            if channel is None:
+                print(f"⚠️ Salon {channel_id} introuvable dans {guild.name}")
+                continue
+
+            print(f"🔎 Scan du salon : {channel.name}")
             try:
-                async for message in channel.history(limit=1000):  # limite = nombre de messages à remonter
+                async for message in channel.history(limit=1000):  # limite ajustable
                     if message.author.bot:
                         continue
                     key = f"{message.author.id}_{message.author.name}"
@@ -51,11 +61,11 @@ async def on_ready():
                             message.created_at > data[key]["last_message"]):
                             data[key]["last_message"] = message.created_at
             except discord.Forbidden:
-                print(f"⛔ Impossible d’accéder à {channel.name}")
+                print(f"⛔ Pas d’accès à {channel.name}")
             except discord.HTTPException as e:
                 print(f"⚠️ Erreur HTTP sur {channel.name}: {e}")
 
-        # Écriture dans un CSV
+        # Écriture CSV
         filename = f"{guild.name}_members.csv"
         with open(filename, mode="w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(
@@ -77,7 +87,8 @@ async def on_ready():
 
         print(f"📂 Données enregistrées dans {filename}")
 
-    await client.close()  # ferme le bot après export
+    await client.close()
+
 
         
 client.run(TOKEN)
