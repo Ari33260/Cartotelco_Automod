@@ -11,6 +11,7 @@ print(".env chargé : OK !")
 
 intents = discord.Intents.default()
 intents.message_content = True
+intents.guilds = True
 
 client = discord.Client(intents=intents)
 
