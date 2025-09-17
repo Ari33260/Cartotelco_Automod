@@ -18,7 +18,12 @@ intents.members = True
 client = discord.Client(intents=intents)
 
 CHANNEL_IDS = [
-    1012741568031100931,
+    1012741568031100931, # general
+    1012782593307070554, # bistro
+    1012751244554678382, # discu telco
+    1012750995371065354, # speedtest
+    1176096736410869840, # photos infra 
+    
 ]
 
 @client.event
@@ -71,7 +76,7 @@ async def on_ready():
         with open(filename, mode="w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(
                 f,
-                fieldnames=["key", "id", "name", "nick", "joined_at", "system", "message_count", "last_message"]
+                fieldnames=["key", "id", "pseudo original", "pseudo serveur", "arrivé le", "client officiel", "nombre de message", "dernier message le"]
             )
             writer.writeheader()
             for key, info in data.items():
