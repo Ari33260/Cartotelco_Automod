@@ -20,7 +20,7 @@ async def on_ready():
     
     for guild in client.guilds:
         for member in guild.members:
-            print(f"{member}")
+            print(member.name)
         
 client.run(TOKEN)
 
