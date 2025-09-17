@@ -24,7 +24,10 @@ CHANNEL_IDS = [
     1012750995371065354, # speedtest
     1176096736410869840, # photos infra
     1367608197040570518, # eNb Analytics
-    
+    1301996850647400448, # Bourse
+    1012782867505479752, # Hardware
+    1175926399987634256, # Jeux
+    1278432821140258827, # Voiture
 ]
 
 @client.event
@@ -58,7 +61,7 @@ async def on_ready():
 
             print(f"🔎 Scan du salon : {channel.name}")
             try:
-                async for message in channel.history(limit=1000):  # limite ajustable
+                async for message in channel.history(limit=1500):  # limite ajustable
                     if message.author.bot:
                         continue
                     key = f"{message.author.id}_{message.author.name}"
