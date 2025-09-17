@@ -14,11 +14,9 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-print("ça fonctionner !")
-
-print("On récupère client.get_all_members()")
-data = client.get_all_members()
-
-print(f"Le type de data est {type(data)}")
-
 client.run(TOKEN)
+
+for member in await client.get_all_members():
+    print(f"Le type est : {type(member)}")
+    print(f"Data : {member}")
+
