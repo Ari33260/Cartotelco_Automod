@@ -16,7 +16,7 @@ client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
-    print(f'Logged on as {bot.user}!')
+    print(f'Logged on as {client.user}!')
     
     for guild in client.guilds:
         for member in guild.members:
