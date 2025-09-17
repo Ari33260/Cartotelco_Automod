@@ -14,8 +14,13 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
+@bot.event
+async def on_ready():
+    print(f'Logged on as {bot.user}!')
+    
+    for guild in client.guilds:
+        for member in guild.members:
+            print(f"{member}")
+        
 client.run(TOKEN)
 
-for guild in client.guilds:
-    for member in guild.members:
-        print(f"{member}")
