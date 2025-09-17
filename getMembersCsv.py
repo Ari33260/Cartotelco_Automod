@@ -14,7 +14,7 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-@bot.event
+@client.event
 async def on_ready():
     print(f'Logged on as {bot.user}!')
     
