@@ -19,4 +19,3 @@ client.run(TOKEN)
 for guild in client.guilds:
     for member in guild.members:
         print(f"{member})
-
