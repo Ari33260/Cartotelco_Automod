@@ -18,5 +18,5 @@ client.run(TOKEN)
 
 for guild in client.guilds:
     for member in guild.members:
-        yield member
+        print(f"{member})
 
