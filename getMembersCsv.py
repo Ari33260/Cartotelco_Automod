@@ -23,6 +23,7 @@ CHANNEL_IDS = [
     1012751244554678382, # discu telco
     1012750995371065354, # speedtest
     1176096736410869840, # photos infra
+    1367608197040570518, # eNb Analytics
     
 ]
 
