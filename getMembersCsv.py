@@ -16,7 +16,7 @@ client = discord.Client(intents=intents)
 
 client.run(TOKEN)
 
-for member in await client.get_all_members():
+for member in client.get_all_members():
     print(f"Le type est : {type(member)}")
     print(f"Data : {member}")
 
