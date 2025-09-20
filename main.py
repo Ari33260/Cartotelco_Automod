@@ -283,7 +283,7 @@ async def getUrlTitle(url):
         if title_tag:
             title = title_tag.get_text()
             print(f"[DEBUG] Le titre est : {title}")
-            return title
+            return title[:100]
         else:
             print(f"[DEBUG] : Erreur lors de l'extraction du titre \n")
             id = IdGenerator()
