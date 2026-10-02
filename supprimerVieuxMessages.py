@@ -3,6 +3,7 @@ import asyncio
 from datetime import datetime, timezone, timedelta
 import discord
 from discord.ext import commands
+import os
 from dotenv import load_dotenv
 
 # VARIABLES GLOBALES (PARAMETRES)
