@@ -4,6 +4,7 @@ from datetime import datetime, timezone, timedelta
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
+import os
 
 # VARIABLES GLOBALES (PARAMETRES)
 LISTES_SALONS = ("1429394357466697899","1429394838683390033","1012750995371065354","1176096736410869840","1429399097210703984","1367608197040570518",
